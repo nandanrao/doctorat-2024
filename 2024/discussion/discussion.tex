@@ -1,0 +1,217 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Beamer Presentation
+% LaTeX Template
+% Version 1.0 (10/11/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND THEMES
+%----------------------------------------------------------------------------------------
+
+\documentclass[aspectratio=169]{beamer}
+\usetheme[progressbar=frametitle]{metropolis}
+\usepackage{appendixnumberbeamer}
+
+
+\usepackage{caption}
+\usepackage{subcaption}
+
+\usepackage[backend=biber, citestyle=authoryear, bibencoding=utf8]{biblatex}
+\addbibresource{../bibs/vlab-report.bib}
+\addbibresource{../bibs/unicef-ie.bib}
+\addbibresource{../bibs/unicef-additions.bib}
+\addbibresource{../bibs/early-childhood-parenting.bib}
+
+\mode<presentation> {
+
+% The Beamer class comes with a number of default slide themes
+% which change the colors and layouts of slides. Below this is a list
+% of all the themes, uncomment each in turn to see what they look like.
+
+%\usetheme{default}
+%\usetheme{AnnArbor}
+%\usetheme{Antibes}
+%\usetheme{Bergen}
+%\usetheme{Berkeley}
+%\usetheme{Berlin}
+% \usetheme{Boadilla} %
+%\usetheme{CambridgeUS} %
+%\usetheme{Copenhagen}
+%\usetheme{Darmstadt}
+%\usetheme{Dresden}
+%\usetheme{Frankfurt}
+%\usetheme{Goettingen}
+%\usetheme{Hannover}
+%\usetheme{Ilmenau}
+%\usetheme{JuanLesPins}
+%\usetheme{Luebeck}
+%\usetheme{Madrid} %
+%\usetheme{Malmoe}
+%\usetheme{Marburg}
+%\usetheme{Montpellier}
+%\usetheme{PaloAlto}
+%\usetheme{Pittsburgh}
+%\usetheme{Rochester}
+%\usetheme{Singapore} %
+%\usetheme{Szeged}
+%\usetheme{Warsaw}
+
+% As well as themes, the Beamer class has a number of color themes
+% for any slide theme. Uncomment each of these in turn to see how it
+% changes the colors of your current slide theme.
+
+%\usecolortheme{albatross}
+%\usecolortheme{beaver} %
+%\usecolortheme{beetle}
+%\usecolortheme{crane}
+%\usecolortheme{dolphin}
+%\usecolortheme{dove}
+%\usecolortheme{fly}
+%\usecolortheme{lily}
+%\usecolortheme{orchid}
+%\usecolortheme{rose}
+%\usecolortheme{seagull}
+%\usecolortheme{seahorse}
+%\usecolortheme{whale}
+%\usecolortheme{wolverine}
+
+%\setbeamertemplate{footline} % To remove the footer line in all slides uncomment this line
+%\setbeamertemplate{footline}[page number] % To replace the footer line in all slides with a simple slide count uncomment this line
+
+\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
+}
+
+\usepackage{graphicx} % Allows including images
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+
+\usepackage{accents}
+\newcommand{\ubar}[1]{\underaccent{\bar}{#1}}
+\usepackage{stmaryrd}
+
+
+\usepackage{pgfplots}
+\pgfplotsset{width=7cm,compat=1.9}
+
+\usepackage{tabularx}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}\newcolumntype{Y}{>{\centering\arraybackslash}X}
+	\newcommand\fnote[1]{\captionsetup{font=footnotesize}\caption*{#1}}
+	\newcolumntype{K}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+
+% Add significance note with \starnote
+\newcommand{\starnote}{\figtext{* p $<$ 0.1, ** p $<$ 0.05, *** p $<$ 0.01. Standard errors in parentheses.}}
+
+\usepackage{siunitx} % centering in tables
+\sisetup{
+detect-mode,
+tight-spacing		= true,
+group-digits		= false ,
+input-signs		= ,
+input-symbols		= ( ) [ ] - + *,
+input-open-uncertainty	= ,
+input-close-uncertainty	= ,
+table-align-text-post	= false
+        }
+\makeatother
+
+
+
+\DeclareMathOperator*{\argmin}{argmin}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\title[title]{Discussion of Online Commerce Dynamics by Adrian Moreno Maria} % The short title appears at the bottom of every slide, the full title is only on the title page
+
+% Authors
+\author[Nandan Rao]{Nandan Rao}
+
+\date[\today] {\today} % Date, can be changed to a custom date
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+%	PRESENTATION SLIDES
+%----------------------------------------------------------------------------------------
+
+%------------------------------------------------
+
+\begin{frame}
+
+\frametitle{Contribution}
+
+
+\begin{itemize}
+\item Takes advantage of a novel dataset with richer data classification of different types of online stores.
+\item Very relevant topic that is shaping our world and that we are concerned about.
+\item Ability for counterfactual modeling to understand the impacts of market players.
+\end{itemize}
+
+\end{frame}
+
+
+
+\begin{frame}
+
+\frametitle{Modeling}
+
+\begin{itemize}
+\item Assumes channel preference to be linear and additive in utility.
+\item Does not choose to model platform effects.
+\item Assumes oligopoly model (extract markups!)
+\item Coefficients on product qualities (sanity check!)
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{I could use more context}
+
+\begin{itemize}
+\item I don't feel like the reason this difference between click-and-mortar and pure online is important is spelled out.
+\item Are some brands more sold in some channels? Fixed effect on brand might absorb some of your channel variation, which is your main interest.
+\item Your main outcome seems to be almost forgotten in the initial analysis of demand estimation -- people prefer brick and mortar all things considered!
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Modeling ideas!}
+
+\begin{itemize}
+\item Why is channel preference just additive? Maybe people generally prefer brick and mortar, but they want more selection and variability of online? Or lower price of online? What are you really trying to say about the decision between channel, besides individual preference? You have a lot of complex modeling, but your question of interest is left simple and forgotten.
+\item Dropping channel random coefficients because not ``significant''---these are presumably nuisance parameters, significance is not well defined.
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Modeling ideas!}
+
+\begin{itemize}
+\item Who are your actors? You lay out a world of resellers and consumers, but then model a world of producers and consumers. Your core actor of interest doesn't any agency, there's no interaction between the resellers. You model complex interaction between producers, who aren't really your subject of study.
+\item Doing a counterfactual is really incredible, but I need to believe the model strongly before going into the counterfactual, because it's a leap of faith! If your modelling the counterfactual of channel, I want to understand channel. Who are these actors and why is your modelling of them interesting?
+\end{itemize}
+\end{frame}
+
+
+
+\end{document}
