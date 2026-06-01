@@ -1,0 +1,43 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+% Requires in preamble: \usepackage{array}
+
+% Set the width you want for each estimate column here:
+\newcommand{\colw}{1.9cm}
+
+\adjustbox{max width=\textwidth}{%
+\begin{tabular}{l
+    >{\centering\arraybackslash}p{\colw}
+    >{\centering\arraybackslash}p{\colw}
+    >{\centering\arraybackslash}p{\colw}
+    >{\centering\arraybackslash}p{\colw}}
+\hline\hline
+                &\multicolumn{2}{c}{Full sample}&\multicolumn{1}{c}{High SES}&\multicolumn{1}{c}{Low SES}\\
+\cmidrule(lr){2-3}\cmidrule(lr){4-4}\cmidrule(lr){5-5}
+                &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         \\
+                &      OLS         &    Logit         &      OLS         &      OLS         \\
+\hline
+T               &    0.030\sym{**} &    0.266\sym{**} &    0.047\sym{**} &    0.010         \\
+                &  (0.014)         &  (0.124)         &  (0.022)         &  (0.021)         \\
+\hline
+
+% Center the interaction stats across columns (3)-(4)
+\emph{T}$\times$\emph{High SES} coef.
+                &                  &                  & \multicolumn{2}{c}{\num{0.039}} \\
+\emph{T}$\times$\emph{High SES} p-value
+                &                  &                  & \multicolumn{2}{c}{\num{0.253}} \\
+\hline
+
+Observations    &     1492         &     1492         &      744         &      748         \\
+Adj. R-squared  &    0.000         &                  &    0.004         &   -0.000         \\
+Pseudo R-squared&                  &    0.003         &                  &                  \\
+Marginal effect &                  &    0.030         &                  &                  \\
+Mean in control &    0.114         &    0.114         &    0.111         &    0.117         \\
+SD in control   &    0.318         &    0.318         &    0.314         &    0.322         \\
+\hline\hline
+
+\multicolumn{5}{p{.75\linewidth}}{\scriptsize Each observation is an individual. The dependent variable equals 1 if the respondent reported to have seen any ad from Malaria No More on Facebook since last August. \(T\) is the treatment indicator. Responses collected in the endline survey between December 15, 2020 and January 31, 2021 are included. State fixed effects are included in all columns. Standard errors are clustered at the district level. \sym{*} \(p<0.1\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\).}\\
+\end{tabular}
+}%
+
+}

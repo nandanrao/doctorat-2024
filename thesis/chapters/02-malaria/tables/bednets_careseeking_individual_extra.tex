@@ -1,0 +1,29 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\adjustbox{max width=\textwidth}{%
+\begin{tabular}{l*{8}{c}}
+\hline\hline
+                &\multicolumn{4}{c}{Respondent used bednet the night before}                &\multicolumn{4}{c}{Timely treatment seeking if high fever}                 \\\cmidrule(lr){2-5}\cmidrule(lr){6-9}
+                &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         &\multicolumn{1}{c}{(5)}         &\multicolumn{1}{c}{(6)}         &\multicolumn{1}{c}{(7)}         &\multicolumn{1}{c}{(8)}         \\
+                &OLS: &Logit:         &OLS:   &OLS:          &OLS: &Logit: &OLS:         &OLS:         \\
+                &Full  &Full          &Control          &Treatment          &Full   &Full          &Control          &Treatment          \\
+                &sample  &  sample       &districts         & districts         &    sample      &  sample & districts         & districts         \\
+\hline
+Individual T    &    0.076\sym{***}&    0.323\sym{**} &    0.083\sym{**} &    0.051         &    0.025\sym{**} &    0.411\sym{**} &    0.039\sym{**} &    0.011         \\
+                &  (0.029)         &  (0.135)         &  (0.040)         &  (0.042)         &  (0.013)         &  (0.208)         &  (0.018)         &  (0.018)         \\
+T               &    0.017         &    0.066         &                  &                  &    0.005         &    0.086         &                  &                  \\
+                &  (0.029)         &  (0.136)         &                  &                  &  (0.013)         &  (0.207)         &                  &                  \\
+Controls        &$\checkmark$         &                  &                  &                  &$\checkmark$         &                  &                  &                  \\
+\hline
+Observations    &\num{1043}         &\num{1043}         &\num{551}         &\num{492}         &\num{1542}         &\num{1542}         &\num{804}         &\num{738}         \\
+Pseudo R-squared&                  &    0.007         &                  &                  &                  &    0.016         &                  &                  \\
+Marginal effect &                  &    0.069         &                  &                  &                  &    0.025         &                  &                  \\
+Adj. R-squared  &    0.031         &                  &    0.001         &    0.002         &    0.005         &                  &    0.005         &    0.018         \\
+Mean in control &    0.654         &    0.654         &    0.642         &    0.667         &    0.921         &    0.921         &    0.912         &    0.931         \\
+SD in control   &    0.476         &    0.476         &    0.480         &    0.472         &    0.270         &    0.270         &    0.284         &    0.254         \\
+\hline\hline
+\multicolumn{9}{p{.95\linewidth}}{\scriptsize Each observation is an individual. Individual T is the individual-level treatment indicator for the remarketing campaign. T is the indicator of district-level treatment assignment. The outcome in columns (1)--(4) is an indicator equal to one if the respondent reports having slept under a bednet the night before the survey; the sample is restricted to households owning at least one bednet. The outcome in columns (5)--(8) is an indicator equal to one if the respondent reports that they would seek treatment within 24 hours if they or a family member experienced a high fever.  Columns (1-2) and (5-6) report estimates on the full sample. Columns (3) and (7) report estimates for respondents in districts assigned to the nationwide malaria campaign, while columns (4) and (8) report estimates for respondents in control districts. Controls in columns (1) and (5) include age, household size, education indicators (university, secondary, primary), employment indicators (unemployed, student), gender, caste indicators (OBC, Other, SC/Dalit, ST), distance-to-health-facility indicators, air conditioning, an indicator for a pregnant woman in the household, and religion indicators (Hindu, Muslim).   Heteroskedasticity-robust standard errors are reported in parentheses.  \sym{*} \(p<0.1\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\)}\\
+\end{tabular}
+}%
+
+}

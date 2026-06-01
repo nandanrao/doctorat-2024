@@ -1,0 +1,26 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\adjustbox{max width=\textwidth}{%
+\begin{tabular}{l*{6}{c}}
+\hline\hline
+                &\multicolumn{3}{c}{Placebo post test}                   &\multicolumn{3}{c}{Linear trend test}                   \\\cmidrule(lr){2-4}\cmidrule(lr){5-7}
+                &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         &\multicolumn{1}{c}{(5)}         &\multicolumn{1}{c}{(6)}         \\
+                &  Overall         &    Urban         &    Rural         &  Overall         &    Urban         &    Rural         \\
+\hline
+T $\times$ Placebo Post&     1.07         &     0.56         &     2.25         &                  &                  &                  \\
+                &   (7.82)         &   (5.29)         &   (8.29)         &                  &                  &                  \\
+T $\times$ Monthly Linear Trend&                  &                  &                  &     0.90         &     1.38         &     0.04         \\
+                &                  &                  &                  &   (4.21)         &   (2.99)         &   (5.13)         \\
+\hline
+Subdistrict FE  &\multicolumn{1}{c}{$\checkmark$}         &\multicolumn{1}{c}{$\checkmark$}         &\multicolumn{1}{c}{$\checkmark$}         &\multicolumn{1}{c}{$\checkmark$}         &\multicolumn{1}{c}{$\checkmark$}         &\multicolumn{1}{c}{$\checkmark$}         \\
+Month FE        &$\checkmark$         &$\checkmark$         &$\checkmark$         &$\checkmark$         &$\checkmark$         &$\checkmark$         \\
+District Controls&$\checkmark$         &$\checkmark$         &$\checkmark$         &$\checkmark$         &$\checkmark$         &$\checkmark$         \\
+Subdistrict Controls&$\checkmark$         &$\checkmark$         &$\checkmark$         &$\checkmark$         &$\checkmark$         &$\checkmark$         \\
+Observations    &      403         &      216         &      336         &      403         &      216         &      336         \\
+Adj. R-squared  &    0.464         &    0.476         &    0.433         &    0.467         &    0.522         &    0.434         \\
+\hline\hline
+\multicolumn{7}{p{0.75\linewidth}}{\scriptsize Notes: Each observation is a subdistrict-month in the pre-campaign period. Columns (1)--(3) report placebo difference-in-differences estimates comparing the final two pre-campaign months to the earlier two. Columns (4)--(6) report linear-trend estimates from the pre-campaign period. \(T\) takes value 1 if the subdistrict belongs to a treated district. All regressions include disctrict and subdistrict control described in Table \ref{tab:incidence} interacted with the placebo post indicator or the monthly linear trend. All regressions include state fixed effects interacted with the placebo post indicator or the monthly linear trend. Standard errors are clustered at the district level. Data come from the Indian Health Management Information System. \sym{*} \(p<0.1\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\)}\\
+\end{tabular}
+}%
+
+}

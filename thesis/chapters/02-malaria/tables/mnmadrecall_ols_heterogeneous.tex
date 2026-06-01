@@ -1,0 +1,24 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\adjustbox{max width=\textwidth}{%
+\begin{tabular}{l*{6}{c}}
+\hline\hline
+                &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         &\multicolumn{1}{c}{(5)}         &\multicolumn{1}{c}{(6)}         \\
+                &OLS:        &Logit:          &OLS:          &OLS:        &OLS:          &OLS:          \\
+                & Full sample         &Full sample         &Age<26         &Age$\geq$26         &Concerned         &Not concerned         \\
+\hline
+T               &    0.030\sym{**} &    0.266\sym{**} &    0.069\sym{***}&   -0.014         &    0.056\sym{**} &   -0.005         \\
+                &  (0.014)         &  (0.124)         &  (0.021)         &  (0.019)         &  (0.022)         &  (0.023)         \\
+Controls        &$\checkmark$         &                  &                  &                  &                  &                  \\
+\hline
+Observations    &\num{1492}         &\num{1492}         &\num{814}         &\num{678}         &\num{834}         &\num{658}         \\
+Pseudo R-squared&                  &    0.003         &                  &                  &                  &                  \\
+Marginal effect &                  &    0.030         &                  &                  &                  &                  \\
+Adj. R-squared  &    0.002         &                  &    0.006         &   -0.004         &    0.005         &   -0.004         \\
+Mean in control &    0.114         &    0.114         &    0.121         &    0.106         &    0.106         &    0.125         \\
+\hline\hline
+\multicolumn{7}{p{.86\linewidth}}{\scriptsize Notes: Each observation is an individual. Responses were collected in the endline survey between December 15, 2020 and January 31, 2021. Controls in column (1) include age, household size, education indicators (university, secondary, primary), employment indicators (unemployed, student), gender, caste indicators (OBC, Other, SC/Dalit, ST), distance-to-health-facility indicators, air conditioning, an indicator for a pregnant woman in the household, and religion indicators (Hindu, Muslim). Concerned individuals are those who at baseline reported being at least somewhat worried that someone in their family will get malaria in the next year. \(T\) is the treatment indicator. All regressions include state fixed effects. Standard errors are clustered at the district level. \sym{*} \(p<0.1\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\).}\\
+\end{tabular}
+}%
+
+}

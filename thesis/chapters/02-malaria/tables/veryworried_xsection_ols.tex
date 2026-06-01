@@ -1,0 +1,24 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\adjustbox{max width=\textwidth}{%
+\begin{tabular}{l*{6}{c}}
+\hline\hline
+                &\multicolumn{3}{c}{Solid house}                         &\multicolumn{3}{c}{Non-solid house}                     \\\cmidrule(lr){2-4}\cmidrule(lr){5-7}
+                &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}&\multicolumn{1}{c}{(5)}&\multicolumn{1}{c}{(6)}\\
+                &\multicolumn{1}{c}{All}&\multicolumn{1}{c}{Has bednet}&\multicolumn{1}{c}{Has no bednet}&\multicolumn{1}{c}{All}&\multicolumn{1}{c}{Has bednet}&\multicolumn{1}{c}{Has no bednet}\\
+\hline
+T               &    0.034         &    0.031         &    0.067\sym{*}  &    0.026         &    0.024         &    0.013         \\
+                &  (0.024)         &  (0.031)         &  (0.037)         &  (0.020)         &  (0.023)         &  (0.031)         \\
+Individual controls&$\checkmark$         &$\checkmark$         &$\checkmark$         &$\checkmark$         &$\checkmark$         &$\checkmark$         \\
+Cluster controls&$\checkmark$         &$\checkmark$         &$\checkmark$         &$\checkmark$         &$\checkmark$         &$\checkmark$         \\
+\hline
+Observations    &\num{1316}         &\num{913}         &\num{403}         &\num{1736}         &\num{1241}         &\num{495}         \\
+Adj. R-squared  &    0.013         &    0.018         &    0.026         &    0.012         &    0.018         &    0.014         \\
+Mean in control &    0.240         &    0.252         &    0.213         &    0.262         &    0.265         &    0.254         \\
+SD in control   &    0.427         &    0.435         &    0.410         &    0.440         &    0.442         &    0.436         \\
+\hline\hline
+\multicolumn{7}{p{1\linewidth}}{\scriptsize Each observation is an individual. Responses collected from January 7, 2021 to March 31, 2021 are included. T is the treatment indicator. Solid house is a binary indicator equal to 1 if the individual lives in a dwelling made of stones, bricks, cement or concrete. State fixed-effects are included in all specifications. Individual controls include gender, age, household size, caste, education, distance to the medical center, employment and student status, religion, presence of pregnant woman in the house, ownership of bednet and of an air conditioner. Cluster controls are reported in Table \ref{tab:districts-balance}. Standard errors are clustered at the district level. \sym{*} \(p<0.1\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\)}\\
+\end{tabular}
+}%
+
+}

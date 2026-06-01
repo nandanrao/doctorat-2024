@@ -1,0 +1,39 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\adjustbox{max width=\textwidth}{%
+\begin{tabular}{l*{2}{c}c}
+\hline\hline
+                &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}\\
+                &\multicolumn{1}{c}{\shortstack{Any HH member had \\malaria in last 5 years}}
+                &\multicolumn{1}{c}{\shortstack{Any HH member had \\malaria in last 2 weeks}}
+                &\multicolumn{1}{c}{\shortstack{SES index: \\PC1 loadings}}\\
+\hline
+Solid house     &   -0.056\sym{***}&   -0.036\sym{***}&   0.6590\\
+                & (0.0000)         & (0.0016)         &         \\
+Semi-solid house&    0.031\sym{***}&    0.004         &  -0.5974\\
+                & (0.0069)         & (0.7370)         &         \\
+Within 60 min to health facility
+                &   -0.038\sym{***}&   -0.032\sym{***}&   0.2596\\
+                & (0.0009)         & (0.0049)         &         \\
+University degree
+                &    0.045\sym{***}&   -0.001         &   0.1959\\
+                & (0.0001)         & (0.9621)         &         \\
+Advantaged caste
+                &   -0.043\sym{***}&   -0.027\sym{**} &   0.1602\\
+                & (0.0002)         & (0.0190)         &         \\
+Has air conditioning
+                &   -0.023\sym{**} &    0.003         &   0.2661\\
+                & (0.0423)         & (0.7967)         &         \\
+Household size  &    0.048\sym{***}&    0.044\sym{***}&  -0.0810\\
+                & (0.0000)         & (0.0001)         &         \\ \hline
+\addlinespace SES index (PC1 score)
+                &   -0.056\sym{***}&   -0.031\sym{***}&         \\
+                & (0.0000)         & (0.0062)         &         \\
+\addlinespace \hline
+Observations    &     7548         &     7548         &         \\
+\hline\hline
+\multicolumn{4}{p{.98\linewidth}}{\scriptsize Notes: Columns (1) and (2) report Pearson correlation coefficients between baseline malaria incidence and SES components (standardized) as well as the SES index (PC1 score). Column (3) reports PCA loadings for the first principal component (PC1) used to construct the SES index. Baseline responses collected from July 23 to August 19, 2020 are included. \textit{p-values} in parentheses. \sym{*} \(p<0.1\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\).}\\
+\end{tabular}
+}%
+
+}

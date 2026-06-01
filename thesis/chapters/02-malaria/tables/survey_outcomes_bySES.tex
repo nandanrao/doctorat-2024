@@ -1,0 +1,65 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\adjustbox{max width=\textwidth}{%
+\begin{tabular}{l
+    >{\centering\arraybackslash}p{2.2cm}
+    >{\centering\arraybackslash}p{2.2cm}
+    >{\centering\arraybackslash}p{2.2cm}
+    >{\centering\arraybackslash}p{2.2cm}}
+\hline\hline \vspace{-0.3cm} \\
+                &\multicolumn{2}{c}{\shortstack{Share of HH members \\ who   used bednet}}&\multicolumn{2}{c}{\shortstack{Any HH member had a fever  \\ during  the campaign}}\\\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+                &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         \\
+                & High SES         &  Low SES         & High SES         &  Low SES         \\
+\hline 
+T               &    0.067\sym{***}&   -0.016         &    0.003         &    0.011         \\
+                &  (0.024)         &  (0.019)         &  (0.020)         &  (0.022)         \\
+\hline
+T p-value (FDR) &\num{0.048}         &\num{0.651}         &\num{0.866}         &\num{0.689}         \\
+\emph{T}$\times$\emph{High SES} coef.
+                & \multicolumn{2}{c}{\num{0.084}}
+                & \multicolumn{2}{c}{\num{-0.006}} \\
+
+\emph{T}$\times$\emph{High SES} p-value
+                & \multicolumn{2}{c}{\num{0.001}}
+                & \multicolumn{2}{c}{\num{0.820}} \\
+
+\emph{T}$\times$\emph{High SES} p-value (FDR)
+                & \multicolumn{2}{c}{\num{0.006}}
+                & \multicolumn{2}{c}{\num{0.820}} \\
+\hline
+Observations    &     1929         &     1971         &     2579         &     2579         \\
+Adj. R-squared  &    0.015         &    0.001         &    0.002         &    0.002         \\
+Mean in control &    0.614         &    0.707         &    0.190         &    0.213         \\
+SD in control   &    0.360         &    0.322         &    0.393         &    0.410         \\
+\hline\hline \vspace{-0.3cm} \\
+
+                &\multicolumn{2}{c}{\shortstack{Share of HH members \\ who had malaria}}&\multicolumn{2}{c}{\shortstack{Any bednet retreated\\with insecticide}}\\\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+                &\multicolumn{1}{c}{(5)}         &\multicolumn{1}{c}{(6)}         &\multicolumn{1}{c}{(7)}         &\multicolumn{1}{c}{(8)}         \\
+                & High SES         &  Low SES         & High SES         &  Low SES         \\
+\hline
+T               &   -0.009\sym{**} &    0.005         &    0.082\sym{**} &    0.021         \\
+                &  (0.004)         &  (0.005)         &  (0.036)         &  (0.035)         \\
+\hline
+T p-value (FDR) &\num{0.061}       &\num{0.601}       &\num{0.064}       &\num{0.689}       \\
+\emph{T}$\times$\emph{High SES} coef.
+                & \multicolumn{2}{c}{\num{-0.014}}
+                & \multicolumn{2}{c}{\num{0.062}} \\
+
+\emph{T}$\times$\emph{High SES} p-value
+                & \multicolumn{2}{c}{\num{0.011}}
+                & \multicolumn{2}{c}{\num{0.187}} \\
+
+\emph{T}$\times$\emph{High SES} p-value (FDR)
+                & \multicolumn{2}{c}{\num{0.022}}
+                & \multicolumn{2}{c}{\num{0.249}} \\
+\hline
+Observations    &     1517         &     1535         &      989         &     1028         \\
+Adj. R-squared  &    0.004         &    0.001         &    0.004         &   -0.002         \\
+Mean in control &    0.016         &    0.016         &    0.406         &    0.412         \\
+SD in control   &    0.083         &    0.079         &    0.492         &    0.493         \\
+\hline\hline
+\multicolumn{5}{p{.89\linewidth}}{\scriptsize Notes: Each observation is an individual. The SES index is constructed using Principal Component Analysis (PCA) based on housing quality, access to health facilities, education, caste status, air conditioning ownership, and standardized household size. The index is standardized and split at the median to define High and Low SES groups. The table reports subgroup-specific treatment effects as well as the interaction coefficient \(T\times High\,SES\) from a model that also includes the standalone indicators \(T\) and \(High\,SES\). We report Benjamini--Hochberg false discovery rate (FDR) adjusted p-values for (i) the subgroup treatment-effect tests across the eight subgroup estimates in this table and (ii) the interaction tests across the four outcomes. All regressions include state fixed effects. Standard errors are clustered at the district level. \sym{*} \(p<0.1\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\).}\\
+\end{tabular}
+}%
+
+}

@@ -1,0 +1,29 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\adjustbox{max width=\textwidth}{%
+\begin{tabular}{l
+    >{\centering\arraybackslash}p{1.7cm}
+    >{\centering\arraybackslash}p{1.7cm}
+    >{\centering\arraybackslash}p{3.4cm}
+    >{\centering\arraybackslash}p{1.7cm}
+    >{\centering\arraybackslash}p{1.7cm}}
+\hline\hline
+                &\multicolumn{2}{c}{\shortstack{Any HH member\\had malaria}}&\multicolumn{1}{c}{\shortstack{Share of HH members\\who had malaria}}&\multicolumn{2}{c}{\shortstack{Any bednet retreated\\with insecticide}}\\\cmidrule(lr){2-3}\cmidrule(lr){4-4}\cmidrule(lr){5-6}
+                &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         &\multicolumn{1}{c}{(5)}         \\
+                &      OLS         &    Logit         &      OLS         &      OLS         &    Logit         \\
+\hline
+T               &    0.003         &    0.053         &   -0.002         &    0.051\sym{*}  &    0.207\sym{*}  \\
+                &  (0.011)         &  (0.196)         &  (0.003)         &  (0.027)         &  (0.108)         \\
+\hline
+Observations    &\num{3052}         &\num{3052}         &\num{3052}         &\num{2017}         &\num{2017}         \\
+Adj. R-squared  &   -0.000         &                  &    0.001         &    0.001         &                  \\
+Pseudo R-squared&                  &    0.001         &                  &                  &    0.002         \\
+Marginal effect &                  &    0.003         &                  &                  &    0.051         \\
+Mean in control &    0.058         &    0.058         &    0.016         &    0.409         &    0.409         \\
+SD in control   &    0.235         &    0.235         &    0.081         &    0.492         &    0.492         \\
+\hline\hline
+\multicolumn{6}{p{.9\linewidth}}{\scriptsize Notes: Each observation is an individual. \(T\) is the treatment indicator. All responses were collected after the campaign, between January 7 and March 31, 2021. Columns (1) and (2) report indicators for whether any household member had malaria since August 2020. Column (3) reports the share of household members with malaria since August 2020. Columns (4) and (5) report whether the respondent retreated their bednet (conditional on having at least one) with insecticide since August 2020. State fixed effects are included in all columns. Standard errors are clustered at the district level. \sym{*} \(p<0.1\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\).}\\
+\end{tabular}
+}%
+
+}

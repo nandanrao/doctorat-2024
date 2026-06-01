@@ -1,0 +1,24 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\adjustbox{max width=\textwidth}{%
+\begin{tabular}{l*{6}{c}}
+\hline\hline
+                &\multicolumn{3}{c}{Tests per M people}                  &\multicolumn{3}{c}{Positive cases/Tests}                \\\cmidrule(lr){2-4}\cmidrule(lr){5-7}
+                &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         &\multicolumn{1}{c}{(5)}         &\multicolumn{1}{c}{(6)}         \\
+                &      All         &    Urban         &    Rural         &      All         &    Urban         &    Rural         \\
+\hline
+T $\times$ Post&  444.807         &  265.388         &  325.588         &   -0.017\sym{**} &   -0.022\sym{*}  &   -0.003         \\
+                &(338.641)         &(232.203)         &(461.989)         &  (0.006)         &  (0.013)         &  (0.010)         \\
+Subdistrict FE  &$\checkmark$         &$\checkmark$         &$\checkmark$         &$\checkmark$         &$\checkmark$         &$\checkmark$         \\
+Month and year FE&$\checkmark$         &$\checkmark$         &$\checkmark$         &$\checkmark$         &$\checkmark$         &$\checkmark$         \\
+Subdistrict controls&$\checkmark$         &$\checkmark$         &$\checkmark$         &$\checkmark$         &$\checkmark$         &$\checkmark$         \\
+District controls&$\checkmark$         &$\checkmark$         &$\checkmark$         &$\checkmark$         &$\checkmark$         &$\checkmark$         \\
+\hline
+Observations    &\num{1498}         &\num{791}         &\num{1338}         &\num{1498}         &\num{791}         &\num{1338}         \\
+Adj. R-squared  &    0.563         &    0.350         &    0.665         &    0.085         &    0.080         &    0.061         \\
+\hline\hline
+\multicolumn{7}{p{0.82\linewidth}}{\scriptsize Notes: Each observation is a subdistrict-month-year. The panel spans April 2020 to May 2021. Post takes value 1 after August 2020, i.e. when the Facebook campaign started. \(T\) takes value 1 if the subdistrict belongs to a treated district. Subdistrict controls include: subdistrict population (only in columns 4-6), area, share of urban population, elevation, terrain ruggedness and distance to the state capital, all interacted with Post. District controls include total population from the Census as well as the shares of baseline survey rsepondents living in kutcha dwellings, with university degree, sleeping under mosquito nets, and reporting any malaria cases in the last 5 years and 2 weeks, all interacted with Post. All regressions include state indicators interacted with Post. Standard errors are clustered at the district level. Data come from the Indian Health Management Information System. \sym{*} \(p<0.1\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\)}\\
+\end{tabular}
+}%
+
+}

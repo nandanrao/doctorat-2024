@@ -1,0 +1,24 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\adjustbox{max width=\textwidth}{%
+\begin{tabular}{l*{8}{c}}
+\hline\hline
+                &\multicolumn{2}{c}{\shortstack{Respondent is very\\ worried about malaria}}&\multicolumn{2}{c}{\shortstack{Respondent\\has a bednet}}&\multicolumn{2}{c}{\shortstack{Respondent\\would buy bednet}}&\multicolumn{2}{c}{\shortstack{Respondent knows \\ where to buy bednet}}\\\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}\cmidrule(lr){8-9}
+                &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         &\multicolumn{1}{c}{(5)}         &\multicolumn{1}{c}{(6)}         &\multicolumn{1}{c}{(7)}         &\multicolumn{1}{c}{(8)}         \\
+                &      OLS         &    Logit         &      OLS         &    Logit         &      OLS         &    Logit         &      OLS         &    Logit         \\
+\hline
+T               &    0.029\sym{*}  &    0.148\sym{*}  &   -0.014         &   -0.066         &    0.015         &    0.066         &   -0.039         &   -0.157         \\
+                &  (0.017)         &  (0.085)         &  (0.032)         &  (0.157)         &  (0.032)         &  (0.140)         &  (0.038)         &  (0.151)         \\
+\hline
+Observations    &\num{3052}         &\num{3052}         &\num{3052}         &\num{3052}         &\num{844}         &\num{844}         &\num{898}         &\num{898}         \\
+Adj. R-squared  &    0.000         &                  &    0.005         &                  &    0.036         &                  &   -0.001         &                  \\
+Pseudo R-squared&                  &    0.001         &                  &    0.006         &                  &    0.029         &                  &    0.002         \\
+Marginal effect &                  &    0.029         &                  &   -0.014         &                  &    0.015         &                  &   -0.039         \\
+Mean in control &    0.253         &    0.253         &    0.711         &    0.711         &    0.389         &    0.389         &    0.513         &    0.513         \\
+SD in control   &    0.435         &    0.435         &    0.454         &    0.454         &    0.488         &    0.488         &    0.500         &    0.500         \\
+\hline\hline
+\multicolumn{9}{p{.94\linewidth}}{\scriptsize Notes: Each observation is an individual. Responses collected from January 7, 2021 to March 31, 2021 are included. \(T\) is the treatment indicator. Willingness to buy a bednet and knowledge of where to buy a bednet are elicited only among respondents in households without a bednet. All regressions include state fixed effects. Standard errors are clustered at the district level. \sym{*} \(p<0.1\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\).}\\
+\end{tabular}
+}%
+
+}

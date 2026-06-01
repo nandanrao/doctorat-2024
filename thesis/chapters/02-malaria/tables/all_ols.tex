@@ -1,0 +1,65 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\adjustbox{max width=\textwidth}{%
+\begin{tabular}{l
+    >{\centering\arraybackslash}p{2.5cm}
+    >{\centering\arraybackslash}p{2.5cm}
+    >{\centering\arraybackslash}p{2.5cm}
+    >{\centering\arraybackslash}p{2.5cm}}
+\hline\hline \vspace{-0.3cm} \\
+                &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         \\
+                &\shortstack{Own bednet use}    &\shortstack{HH bednet use}     &\shortstack{Long sleeves}      &Sprays         \\
+\hline
+T               &    0.030\sym{*}  &    0.028\sym{**} &   -0.001         &   -0.035         \\
+                &  (0.017)         &  (0.014)         &  (0.017)         &  (0.022)         \\
+Controls        &$\checkmark$         &$\checkmark$         &$\checkmark$         &$\checkmark$         \\
+\hline
+Clustered p-value&\num{0.071}         &\num{0.049}         &\num{0.959}         &\num{0.116}         \\
+FDR-adjusted p-value&    0.301         &    0.301         &    0.959         &    0.372         \\
+Observations    &     4004         &     3900         &     5174         &     2351         \\
+Adj. R-squared  &    0.015         &    0.029         &    0.028         &    0.012         \\
+\hline\hline \vspace{-0.3cm} \\
+
+                &\multicolumn{1}{c}{(5)}         &\multicolumn{1}{c}{(6)}         &\multicolumn{1}{c}{(7)}         &\multicolumn{1}{c}{(8)}         \\
+                &\shortstack{Protective \\ behavior index}  &\shortstack{Any fever \\ (during campaign)}         &\shortstack{Care-seeking\\(24h)}&\shortstack{Any malaria \\ (during campaign)}       \\
+\hline
+T               &    0.018         &    0.008         &    0.021         &   -0.007         \\
+                &  (0.039)         &  (0.014)         &  (0.025)         &  (0.007)         \\
+Controls        &$\checkmark$         &$\checkmark$         &$\checkmark$         &$\checkmark$         \\
+\hline
+Clustered p-value&\num{0.642}         &\num{0.583}         &\num{0.408}         &\num{0.322}         \\
+FDR-adjusted p-value&    0.934         &    0.933         &    0.817         &    0.817         \\
+Observations    &     5201         &     5158         &      724         &     5141         \\
+Adj. R-squared  &    0.037         &    0.019         &    0.032         &    0.025         \\
+\hline\hline \vspace{-0.3cm} \\
+
+                &\multicolumn{1}{c}{(9)}         &\multicolumn{1}{c}{(10)}        &\multicolumn{1}{c}{(11)}        &\multicolumn{1}{c}{(12)}        \\
+                &\shortstack{Malaria test \\ (during campaign)}      &\shortstack{Any HH malaria \\ (after campaign)}    &\shortstack{Share HH malaria \\ (after campaign)}  &\shortstack{Net retreated \\ $\,$}     \\
+\hline
+T               &   -0.012         &    0.001         &   -0.002         &    0.046\sym{*}  \\
+                &  (0.051)         &  (0.009)         &  (0.003)         &  (0.025)         \\
+Controls        &$\checkmark$         &$\checkmark$         &$\checkmark$         &$\checkmark$         \\
+\hline
+Clustered p-value&\num{0.816}         &\num{0.891}         &\num{0.476}         &\num{0.075}         \\
+FDR-adjusted p-value&    0.959         &    0.959         &    0.846         &    0.301         \\
+Observations    &      324         &     3052         &     3052         &     2017         \\
+Adj. R-squared  &    0.013         &    0.027         &    0.024         &    0.020         \\
+\hline\hline \vspace{-0.3cm} \\
+
+                &\multicolumn{1}{c}{(13)}        &\multicolumn{1}{c}{(14)}        &\multicolumn{1}{c}{(15)}        &\multicolumn{1}{c}{(16)}        \\
+                &\shortstack{Very worried \\ about malaria} &\shortstack{Has a bednet \\ $\,$} &\shortstack{Would buy \\ bednet} &\shortstack{Knows where to \\ buy bednet} \\
+\hline
+T               &    0.028\sym{*}  &   -0.008         &   -0.003         &   -0.026         \\
+                &  (0.015)         &  (0.027)         &  (0.031)         &  (0.031)         \\
+Controls        &$\checkmark$         &$\checkmark$         &$\checkmark$         &$\checkmark$         \\
+\hline
+Clustered p-value&\num{0.067}         &\num{0.763}         &\num{0.914}         &\num{0.398}         \\
+FDR-adjusted p-value&    0.301         &    0.959         &    0.959         &    0.817         \\
+Observations    &     3052         &     3052         &      844         &      898         \\
+Adj. R-squared  &    0.009         &    0.054         &    0.103         &    0.034         \\
+\hline\hline
+\multicolumn{5}{p{.89\linewidth}}{\scriptsize Notes: All specifications include state fixed effects, individual-level and district-level controls. \(T\) is the treatment indicator. Individual-level controls include age,  household size, education indicators (university, secondary, primary), employment indicators (unemployed, student), gender, caste indicators (OBC, Other, SC/Dalit, ST), distance-to-health-facility indicators, air conditioning, an indicator for a pregnant woman in the household, and religion indicators (Hindu, Muslim). District-level controls include population, education, housing quality, unemployment, and ad-market measures (cost per completion, CTR, CPM, and cost per message). Standard errors are clustered at the district level. The row labeled Clustered p-value reports the conventional p-value based on clustered standard errors. The row labeled FDR-adjusted p-value reports Benjamini--Hochberg false discovery rate adjusted p-values across the 16 treatment-effect estimates shown in the table. Willingness to buy a bednet and knowledge of where to buy a bednet are estimated only among respondents in households without a bednet. \sym{*} \(p<0.1\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\).}\\
+\end{tabular}
+}%
+
+}

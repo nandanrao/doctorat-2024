@@ -1,0 +1,21 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\adjustbox{max width=\textwidth}{%
+\begin{tabular}{l*{6}{c}}
+\hline\hline
+                    &\multicolumn{3}{c}{All subdistricts}  &\multicolumn{3}{c}{Subdistricts with >50\% population within circles}\\\cmidrule(lr){2-4}\cmidrule(lr){5-7}
+                    &All health facilities&       Urban&       Rural&All health facilities&       Urban&       Rural\\
+\hline
+N. of cases         &        9.63&        3.65&        9.37&       10.05&        4.76&        8.93\\
+N. of cases per M people&       51.23&        7.33&       53.80&       20.89&        9.45&       18.87\\
+N. of tests per M people&     3278.63&     1050.34&     3267.20&     2689.72&     1221.98&     2425.33\\
+Test positivity rate (\%)&        1.50&        1.45&        1.43&        1.24&        1.71&        1.10\\
+Population (Thousand)&      550.35&      905.92&      509.51&      716.82&      960.55&      656.96\\
+\hline
+N. of subdistricts  &   \num{395}&   \num{111}&   \num{392}&   \num{119}&    \num{65}&   \num{116}\\
+\hline\hline
+\multicolumn{7}{p{1.10\linewidth}}{\scriptsize  Notes: The table reports the means of the variables across the different subsamples. Only subdistricts with non-missing entries are included. Subdistricts where the number of positive malaria cases was larger than the number of malaria tests conducted are dropped. Subdistricts often include both urban and rural areas. As a result, malaria incidence is reported separately for urban and rural health facilities within the same subdistrict, and the corresponding sample sizes do not necessarily sum to the total number of subdistricts. }\\
+\end{tabular}
+}%
+
+}

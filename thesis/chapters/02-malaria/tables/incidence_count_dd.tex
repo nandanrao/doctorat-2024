@@ -1,0 +1,26 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\adjustbox{max width=\textwidth}{%
+\begin{tabular}{l*{6}{c}}
+\hline\hline
+                &\multicolumn{3}{c}{log(N. of cases)}                    &\multicolumn{3}{c}{Poisson(N. of cases)}                \\\cmidrule(lr){2-4}\cmidrule(lr){5-7}
+                &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         &\multicolumn{1}{c}{(5)}         &\multicolumn{1}{c}{(6)}         \\
+                &      All         &    Urban         &    Rural         &      All         &    Urban         &    Rural         \\
+\hline
+T $\times$ Post&   -0.125         &   -0.296\sym{**} &   -0.048         &    0.192         &   -1.976\sym{***}&    0.905         \\
+                &  (0.110)         &  (0.145)         &  (0.094)         &  (0.583)         &  (0.427)         &  (0.666)         \\
+Subdistrict FE  &$\checkmark$         &$\checkmark$         &$\checkmark$         &$\checkmark$         &$\checkmark$         &$\checkmark$         \\
+Month and year FE&$\checkmark$         &$\checkmark$         &$\checkmark$         &$\checkmark$         &$\checkmark$         &$\checkmark$         \\
+Subdistrict controls&$\checkmark$         &$\checkmark$         &$\checkmark$         &$\checkmark$         &$\checkmark$         &$\checkmark$         \\
+District controls&$\checkmark$         &$\checkmark$         &$\checkmark$         &$\checkmark$         &$\checkmark$         &$\checkmark$         \\
+\hline
+Observations    &\num{1498}         &\num{791}         &\num{1338}         &\num{1498}         &\num{791}         &\num{1338}         \\
+Adj. R-squared  &    0.535         &    0.572         &    0.492         &                  &                  &                  \\
+Log-likelihood  &                  &                  &                  & -13339.1         &  -2217.8         & -12498.1         \\
+Mean N. of cases at baseline&   20.000         &   10.483         &   15.885         &   20.000         &   10.483         &   15.885         \\
+\hline\hline
+\multicolumn{7}{p{0.85\linewidth}}{\scriptsize Notes: Each observation is a subdistrict-month-year. The panel spans April 2020 to May 2021. Post takes value 1 after August 2020, i.e. when the Facebook campaign started. \(T\) takes value 1 if the subdistrict belongs to a treated district. Subdistrict controls include: subdistrict population, area, share of urban population, elevation, terrain ruggedness and distance to the state capital, all interacted with Post. District controls include total population from the Census as well as the shares of baseline survey respondents living in kutcha dwellings, with university degree, sleeping under mosquito nets, and reporting any malaria cases in the last 5 years and 2 weeks, all interacted with Post. All regressions include state indicators interacted with Post. Standard errors are clustered at the district level. Data come from the Indian Health Management Information System. \sym{*} \(p<0.1\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\)}\\
+\end{tabular}
+}%
+
+}

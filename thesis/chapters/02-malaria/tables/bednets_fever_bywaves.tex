@@ -1,0 +1,21 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\adjustbox{max width=\textwidth}{%
+\begin{tabular}{l*{9}{c}}
+\hline\hline
+                &\multicolumn{3}{c}{\shortstack{Respondent used bednet \\ the previous night}}&\multicolumn{3}{c}{\shortstack{Share of HH members \\ who used bednet}}&\multicolumn{3}{c}{\shortstack{Any member had a \\ fever in the last 2 weeks}}\\\cmidrule(lr){2-4}\cmidrule(lr){5-7}\cmidrule(lr){8-10}
+                &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         &\multicolumn{1}{c}{(5)}         &\multicolumn{1}{c}{(6)}         &\multicolumn{1}{c}{(7)}         &\multicolumn{1}{c}{(8)}         &\multicolumn{1}{c}{(9)}         \\
+                &1\textsuperscript{st} wave         &1-4 waves         & 5+ waves         &1\textsuperscript{st} wave         &1-4 waves         & 5+ waves         &1\textsuperscript{st} wave         &1-4 waves         & 5+ waves         \\
+\hline
+T               &    0.022         &    0.023         &    0.035         &    0.011         &    0.019         &    0.030         &    0.009         &    0.005         &    0.008         \\
+                &  (0.022)         &  (0.023)         &  (0.023)         &  (0.018)         &  (0.020)         &  (0.021)         &  (0.009)         &  (0.009)         &  (0.008)         \\
+\hline
+Observations    &\num{4004}         &\num{5100}         &\num{6865}         &\num{3867}         &\num{4897}         &\num{6722}         &\num{5157}         &\num{6546}         &\num{8601}         \\
+Adj. R-squared  &    0.003         &    0.002         &    0.007         &    0.003         &    0.004         &    0.006         &    0.001         &    0.002         &    0.001         \\
+Wald-test (p-value)&                  &                  &    0.722         &                  &                  &    0.717         &                  &                  &    0.843         \\
+\hline\hline
+\multicolumn{10}{p{1.10\linewidth}}{\scriptsize Notes: Each observation is an individual-wave. Columns (1, 4, and 7) include only responses from the first survey wave. Columns (2, 5, and 8) and columns (3, 6, and 9) include responses from individuals who completed 1--4 and 5+ waves, respectively. Only responses collected from September 1, 2020 to January 31, 2021 are included. Columns (1--6) restrict the sample to households with at least one bednet. For each outcome, the last row reports the p-value from a two-sided test of equality of the treatment coefficients between the 1--4 waves and 5+ waves subsamples. \(T\) is the treatment indicator. State fixed effects are included in all specifications. Standard errors are clustered at the district level. \sym{*} \(p<0.1\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\).}\\
+\end{tabular}
+}%
+
+}

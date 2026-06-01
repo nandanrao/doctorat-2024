@@ -1,0 +1,52 @@
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+*.lof
+*.lot
+*.nav
+*.snm
+*.vrb
+*.idx
+*.ilg
+*.ind
+*-blx.bib
+
+# Build directory
+_build/
+
+# Incremental-build stub written by scripts/watch.sh
+_includeonly.tex
+
+# Editor scratch files
+*.swp
+*.swo
+*~
+.\#*
+\#*\#
+
+# AUCTeX
+auto/
+
+# Python bytecode cache (build/temp)
+__pycache__/
+*.pyc
+
+# Working notes and agent-handoff doc (not part of the compilable source)
+notes/
+HANDOFF.md
+
+# Vendored "raw" intermediates left by sync-from-source.sh
+*.tex.raw
+
+# Compiled output PDFs (build products, not needed to compile the source).
+main.pdf
+rao-thesis-2026.pdf

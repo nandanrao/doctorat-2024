@@ -1,0 +1,29 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\adjustbox{max width=\textwidth}{%
+\begin{tabular}{l*{5}{c}}
+\hline\hline
+                &\multicolumn{3}{c}{Any dwelling type}                   &\multicolumn{1}{c}{Solid house}&\multicolumn{1}{c}{Non-Solid house}\\\cmidrule(lr){2-4}\cmidrule(lr){5-5}\cmidrule(lr){6-6}
+                &      (1)         &      (2)         &      (3)         &      (4)         &      (5)         \\
+\hline
+Individual T    &    0.359\sym{***}&    0.387\sym{***}&    0.424\sym{**} &    0.345\sym{*}  &    0.465\sym{**} \\
+                &  (0.136)         &  (0.141)         &  (0.208)         &  (0.192)         &  (0.218)         \\
+Individual T $\times$ Solid house&                  &                  &   -0.068         &                  &                  \\
+                &                  &                  &  (0.281)         &                  &                  \\
+Solid house     &   -0.545\sym{***}&   -0.396\sym{***}&   -0.363\sym{*}  &                  &                  \\
+                &  (0.137)         &  (0.153)         &  (0.203)         &                  &                  \\
+T               &    0.092         &    0.103         &    0.102         &    0.266         &   -0.080         \\
+                &  (0.137)         &  (0.141)         &  (0.141)         &  (0.196)         &  (0.213)         \\
+Individual controls&                  &$\checkmark$         &$\checkmark$         &$\checkmark$         &$\checkmark$         \\
+\hline
+Observations    &\num{1043}         &\num{1043}         &\num{1043}         &\num{513}         &\num{530}         \\
+Pseudo R-squared&    0.017         &    0.044         &    0.044         &    0.051         &    0.063         \\
+Marginal effect &    0.075         &    0.078         &    0.086         &    0.075         &    0.082         \\
+Mean in control &    0.654         &    0.654         &    0.654         &    0.595         &    0.706         \\
+SD in control   &    0.476         &    0.476         &    0.476         &    0.492         &    0.456         \\
+\hline\hline
+\multicolumn{6}{p{0.85\linewidth}}{\scriptsize Each observation is an individual. Indivitual T is the individual treatment indicator for the remarketing campaign. T is the indicator of the district-level treatment assignment. Solid house is a binary indicator equal to 1 if the individual lives in a dwelling made of stones, bricks, cement or concrete. Individual controls include gender, age, household size, caste, education, distance to the medical center, employment and student status, religion, presence of pregnant woman in the house and ownership of an air conditioner. Heteroskedasticity-robust standard errors in parentheses. \sym{*} \(p<0.1\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\)}\\
+\end{tabular}
+}%
+
+}

@@ -1,0 +1,37 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\adjustbox{max width=\textwidth}{%
+\begin{tabular}{l*{2}{c}}
+\hline\hline
+                &\multicolumn{2}{c}{Y=1 if individual response is missing in eligible survey wave}\\\cmidrule(lr){2-3}
+                &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         \\
+                &   T only         &T + T $\times$ Wave         \\
+\hline
+T               &   -0.005         &    0.019         \\
+                &  (0.011)         &  (0.017)         \\
+T $\times$ Wave 2&                  &   -0.047         \\
+                &                  &  (0.041)         \\
+T $\times$ Wave 3&                  &   -0.031         \\
+                &                  &  (0.033)         \\
+T $\times$ Wave 4&                  &   -0.027         \\
+                &                  &  (0.030)         \\
+T $\times$ Wave 5&                  &   -0.029         \\
+                &                  &  (0.028)         \\
+T $\times$ Wave 6&                  &   -0.022         \\
+                &                  &  (0.027)         \\
+T $\times$ Wave 7&                  &   -0.023         \\
+                &                  &  (0.027)         \\
+T $\times$ Wave 8&                  &   -0.022         \\
+                &                  &  (0.023)         \\
+T $\times$ Wave 9&                  &   -0.022         \\
+                &                  &  (0.017)         \\
+Wave FE         &\(\checkmark\)         &\(\checkmark\)         \\
+\hline
+Observations    &\num{57685}         &\num{57685}         \\
+Adj. R-squared  &    0.230         &    0.230         \\
+\hline\hline
+\multicolumn{3}{p{.75\linewidth}}{\scriptsize Notes: The table reports estimates from individual-wave regressions in which the dependent variable equals one if the respondent did not answer a given eligible post-treatment survey wave in the raw data, and zero otherwise. \(T\) is the treatment indicator.  Column (1) includes the treatment indicator and wave fixed effects. Column (2) additionally includes interactions between the treatment indicator and wave dummies. State fixed effects are included in all columns. Standard errors are clustered at the district level. \sym{*} \(p<0.1\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\)}\\
+\end{tabular}
+}%
+
+}

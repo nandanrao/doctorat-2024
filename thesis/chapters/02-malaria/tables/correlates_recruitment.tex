@@ -1,0 +1,40 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\adjustbox{max width=\textwidth}{%
+\begin{tabular}{l*{9}{c}}
+\hline\hline
+                &\multicolumn{9}{c}{\shortstack{Cost per mille, USD (mean CPM =     0.949)}}                                                                                               \\\cmidrule(lr){2-10}
+                &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         &\multicolumn{1}{c}{(5)}         &\multicolumn{1}{c}{(6)}         &\multicolumn{1}{c}{(7)}         &\multicolumn{1}{c}{(8)}         &\multicolumn{1}{c}{(9)}         \\
+\hline
+log(population density)&   -0.346\sym{***}&                  &                  &                  &                  &                  &                  &                  &                  \\
+                &  (0.114)         &                  &                  &                  &                  &                  &                  &                  &                  \\
+log(population) &                  &   -0.478\sym{***}&                  &                  &                  &                  &                  &                  &   -0.338\sym{**} \\
+                &                  &  (0.133)         &                  &                  &                  &                  &                  &                  &  (0.145)         \\
+log(area)       &                  &                  &    0.085         &                  &                  &                  &                  &                  &   -0.090         \\
+                &                  &                  &  (0.080)         &                  &                  &                  &                  &                  &  (0.101)         \\
+Share rural population&                  &                  &                  &    0.945\sym{***}&                  &                  &                  &                  &   -0.562         \\
+                &                  &                  &                  &  (0.300)         &                  &                  &                  &                  &  (0.421)         \\
+Share in solid houses&                  &                  &                  &                  &   -0.900\sym{***}&                  &                  &                  &   -0.656\sym{**} \\
+                &                  &                  &                  &                  &  (0.291)         &                  &                  &                  &  (0.327)         \\
+Wealth index    &                  &                  &                  &                  &                  &   -0.192\sym{***}&                  &                  &    0.097         \\
+                &                  &                  &                  &                  &                  &  (0.061)         &                  &                  &  (0.060)         \\
+Share with internet access&                  &                  &                  &                  &                  &                  &   -1.845\sym{***}&                  &   -0.652         \\
+                &                  &                  &                  &                  &                  &                  &  (0.585)         &                  &  (0.411)         \\
+Share with mobile phone&                  &                  &                  &                  &                  &                  &                  &   -5.198\sym{***}&   -2.847\sym{*}  \\
+                &                  &                  &                  &                  &                  &                  &                  &  (1.702)         &  (1.603)         \\
+Constant        &   -1.623\sym{**} &    1.263\sym{***}&    0.848\sym{***}&    0.225         &    1.290\sym{***}&    0.950\sym{***}&    1.847\sym{***}&    5.705\sym{***}&    4.877\sym{***}\\
+                &  (0.816)         &  (0.118)         &  (0.074)         &  (0.202)         &  (0.148)         &  (0.045)         &  (0.318)         &  (1.589)         &  (1.621)         \\
+\hline
+Observations    &\num{117}         &\num{117}         &\num{117}         &\num{117}         &\num{117}         &\num{117}         &\num{117}         &\num{117}         &\num{117}         \\
+Adj. R-squared  &    0.325         &    0.418         &   -0.003         &    0.099         &    0.069         &    0.129         &    0.189         &    0.383         &    0.466         \\
+\hline\hline
+\multicolumn{10}{p{1.12\linewidth}}{\scriptsize The table reports OLS coefficients from regressions of cost per mille (CPM), collected during the scoping survey, on district characteristics from DHS and UN data (2019--2021). Each observation is a district. The Wealth Index is provided by the DHS and comprises household assets and access to utilities and services. Only districts with complete data on the variables included in each specification are used. Heteroskedasticity-robust standard errors are reported in parentheses. \sym{*} \(p<0.1\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\).}\\
+\end{tabular}
+}%
+
+}
+
+
+
+
+

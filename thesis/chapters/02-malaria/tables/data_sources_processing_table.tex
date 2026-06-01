@@ -1,0 +1,82 @@
+\providecommand{\sym}[1]{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begingroup
+\renewcommand{\arraystretch}{0.94}
+\hspace*{-1.7cm} 
+\adjustbox{max width=\textwidth}{%
+\begin{tabular}{p{3.6cm} p{6.8cm} p{6.8cm}}
+\toprule
+\textbf{\makecell[l]{Data (Source); \\ \textit{Level of Obs}}} & \textbf{Processing and cleaning procedures } & \textbf{Output} \\
+\midrule
+
+\makecell[l]{District Boundaries\\(Govt.);\\\emph{District}}
+  & \makecell[l]{1) Remove 3 state capitals;\\ 2) Select 80 districts for study;\\ 3) Drop 1 due to attribution error\sym{*}}
+  & \makecell[l]{79 study districts across 3 states} \\
+\addlinespace \hline \addlinespace
+
+\makecell[l]{Longitudinal Survey\\(Research team);\\\emph{Individual--wave}}
+  & \makecell[l]{1) Responses Sep 1--Jan 31, with at \\ least one  nonmissing outcome:\\  \hspace{0.2cm} Obs=20,125, Ind.=6,954 \\
+                 2) Drop quick responses\sym{**}:  \\ \hspace{0.2cm} Obs=15,940; Ind.=5,501 \\ 
+                 3) Drop if age <18 or $\geq$90: \\ \hspace{0.2cm} Obs=15,307; Ind.=5,228 \\ 
+                 4) Drop HHs $\geq$30 members:  \\ \hspace{0.2cm} Obs=15,259; Ind.=5,209 \\
+                 5) Drop if missing covariates:  \\ \hspace{0.2cm} Obs=15,251; Ind.=5,201}
+  & \makecell[l]{
+Final sample at individual-wave level: 
+15,251 obs \\ from 5,201 individuals in 79 study districts.\\
+Nonmissing responses per outcome:\\
+--Individual bednet use: Obs=15,250; Ind.=5,201 \\
+--HH bednet use: Obs=14,792; Ind.=5,050 \\
+--Long-sleeve clothing use: Obs=5,189; Ind.=5,174 \\
+--Body/wall spray use: Obs=2,423; Ind.=2,351 \\
+--Any fever in HH:  Obs=15,147; Ind.=5,158 \\
+--Any malaria in HH: Obs=15,121; Ind.=5,141
+}  \\
+\addlinespace \hline \addlinespace
+
+\makecell[l]{Cross‐sectional \\ Survey\\(Research team);\\\emph{Individual}}
+  & \makecell[l]{1) Responses Jan 7--Mar 31,  \\ with nonmissing outcomes:  Ind.=3,368 \\
+                 2) Drop quick responses\sym{**}: Ind.=3,060 \\
+                 3) Drop if age <18 or $\geq$90: Ind.=3,060 \\
+                 4) Drop HHs $\geq$30 members: Ind.=3,060 \\
+                 5) Drop if missing covariates:  Ind.=3,052}
+  & \makecell[l]{Final sample of 3,052 individuals  in 79 study \\ districts, with nonmissing malaria outcomes} \\
+\addlinespace \hline \addlinespace
+
+\makecell[l]{\textit{Feed} Experiment \\ Sample\\(Research team);\\\emph{Individual}}
+  & \makecell[l]{1) Responses Mar 28--Apr 30, \\ with  nonmissing outcomes:  Ind.=1,565; \\
+                 2) Drop quick responses\sym{**}: Ind.=1,545 \\
+                 3) Drop if age <18 or $\geq$90: Ind.=1,545 \\
+                 4) Drop HHs $\geq$30 members: Ind.=1,545 \\
+                 5) Drop if missing covariates:  Ind.=1,542}
+  & \makecell[l]{Final sample of 1,542 individuals  in 79 study \\ districts, with nonmissing bednet use and \\ treatment seeking outcomes} \\
+\addlinespace \hline \addlinespace
+
+\makecell[l]{Recorded Malaria \\Cases \\(HMIS, 2020-2021);\\\emph{Subdistrict-month}}
+  & \makecell[l]{1) Apr 1,~2020--May 31,~2021;\\ 2) Drop unstable boundaries;\\ 3) Drop if N. cases>N. tests; \\ 4) Identify subdistrict population\\ overlapping with study circles}
+  & \makecell[l]{395 subdistricts in 79 study districts;\\ 119 subdistricts with >50\%  population within \\study circles} \\
+\addlinespace \hline \addlinespace
+
+\makecell[l]{Census~2011 (Govt.);\\\emph{District}}
+  & None
+  & \makecell[l]{District-level covariates;\\ 121 districts, of which 79 selected in our study} \\
+ \addlinespace \hline \addlinespace
+
+\makecell[l]{DHS~2019--2021;\\\emph{Individual}}
+  & \makecell[l]{Compute weighted means\\ by district}
+  & \makecell[l]{District-level covariates;\\ 121 districts, of which 79 selected in our study}  \\
+\addlinespace \hline \addlinespace
+
+\makecell[l]{Population\\(UN WPP~2020);\\\emph{$1\,km \times 1\,km$}}
+  & \makecell[l]{Compute district-level totals\\via GIS software}
+  & \makecell[l]{Population counts control;\\ Rural vs. Urban pop. share;\\ 121 districts, of which 79 selected in our study} \\
+\addlinespace \hline \addlinespace
+
+\makecell[l]{Elevation (ETOPO5);\\\emph{$1\,km \times 1\,km$}}
+  & \makecell[l]{Compute district-level means\\and st. dev. via GIS software}
+  & \makecell[l]{Geographic controls;\\121 districts, of which 79 selected in our study} \\
+\bottomrule
+
+\multicolumn{3}{p{1.17\linewidth}}{\scriptsize \sym{*}One study district was excluded due to a data attribution issue during campaign implementation. Specifically, there were two districts named Balrampur---each in a different state. One of them was intended to be included in the study and assigned to the treatment group. Due to the same name, however,  it became impossible ex-post to determine which district was assigned to which condition. As a result, both were excluded from the analysis. \par \sym{**}We used timestamp data collected for each survey question to identify respondents who answered most questions unusually quickly. Specifically, we excluded respondents whose 90th percentile response time was less than three times their fastest response time. This approach accounts for individual variation in response speed while flagging uniformly fast response patterns suggestive of inattention and low engagement. }\\
+\end{tabular}
+}%
+
+\endgroup

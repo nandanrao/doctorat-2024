@@ -1,0 +1,28 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\adjustbox{max width=\textwidth}{%
+\begin{tabular}{l*{8}{c}}
+\hline\hline
+                &\multicolumn{4}{c}{Any member has had a fever last 2 weeks}                             &\multicolumn{4}{c}{Any member sought for help within 24h}                  \\\cmidrule(lr){2-5}\cmidrule(lr){6-9}
+                &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         &\multicolumn{1}{c}{(5)}         &\multicolumn{1}{c}{(6)}         &\multicolumn{1}{c}{(7)}         &\multicolumn{1}{c}{(8)}         \\
+                &     Full         &     Full         &     Full         &Solid house         &     Full         &     Full         &     Full         &Solid house         \\
+\hline
+T               &    0.007         &    0.008         &    0.012         &    0.005         &   -0.007         &    0.002         &   -0.046         &    0.090\sym{**} \\
+                &  (0.006)         &  (0.005)         &  (0.007)         &  (0.006)         &  (0.028)         &  (0.024)         &  (0.038)         &  (0.035)         \\
+T $\times$ Solid house&                  &                  &   -0.009         &                  &                  &                  &    0.121\sym{**} &                  \\
+                &                  &                  &  (0.010)         &                  &                  &                  &  (0.060)         &                  \\
+Solid house     &                  &   -0.011\sym{*}  &   -0.006         &                  &                  &    0.060         &   -0.002         &                  \\
+                &                  &  (0.006)         &  (0.006)         &                  &                  &  (0.037)         &  (0.049)         &                  \\
+Individual controls&                  &$\checkmark$         &$\checkmark$         &$\checkmark$         &                  &$\checkmark$         &$\checkmark$         &$\checkmark$         \\
+Cluster controls&                  &$\checkmark$         &$\checkmark$         &$\checkmark$         &                  &$\checkmark$         &$\checkmark$         &$\checkmark$         \\
+\hline
+Observations    &\num{15147}         &\num{15147}         &\num{15147}         &\num{7309}         &\num{926}         &\num{926}         &\num{926}         &\num{381}         \\
+Adj. R-squared  &    0.001         &    0.011         &    0.011         &    0.014         &   -0.002         &    0.029         &    0.033         &    0.042         \\
+Mean in control &    0.068         &    0.068         &    0.068         &    0.060         &    0.786         &    0.786         &    0.786         &    0.802         \\
+SD in control   &    0.252         &    0.252         &    0.252         &    0.238         &    0.410         &    0.410         &    0.410         &    0.399         \\
+\hline\hline
+\multicolumn{9}{p{1.02\linewidth}}{\scriptsize Each observation is an individual-wave. Responses collected from September 1, 2020 to January 31, 2021 are included. In columns (1-4), the dependent variable takes value 1 if the respondent/family member has had a fever (100.4°F / 38°C or above) in the two weeks before the survey. In columns (5-8), the dependent variable takes value 1 if the respondent/family member with fever has sought for help within 24 hours in the two weeks before the survey. T is the treatment indicator. Solid house is a binary indicator equal to 1 if the individual lives in a dwelling made of stones, bricks, cement or concrete. State fixed-effects are included in all specifications. Individual controls include gender, age, household size, caste, education, distance to the medical center, employment and student status, religion, presence of pregnant woman in the house, ownership of bednet and air conditioner, and 5-year malaria incidence at baseline. Cluster controls are reported in Table \ref{tab:districts-balance}. Standard errors are clustered at the district level. \sym{*} \(p<0.1\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\)}\\
+\end{tabular}
+}%
+
+}

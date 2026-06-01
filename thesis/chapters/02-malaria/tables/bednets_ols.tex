@@ -1,0 +1,23 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\adjustbox{max width=\textwidth}{%
+\begin{tabular}{l*{4}{c}}
+\hline\hline
+                &\multicolumn{2}{c}{Share of times respondent used bednet}&\multicolumn{2}{c}{Share of HH members who used bednet}\\\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+                &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         \\
+Unit of analysis:                &   Individual         &Individual-wave        &   Individual         &Individual-wave        \\
+\hline
+T               &    0.030         &    0.030         &    0.025         &    0.025         \\
+                &  (0.019)         &  (0.019)         &  (0.017)         &  (0.018)         \\
+Wave FE         &                  &$\checkmark$         &                  &$\checkmark$         \\
+\hline
+Observations    &\num{4004}         &\num{11965}         &\num{3900}         &\num{11619}         \\
+Adj. R-squared  &    0.006         &    0.007         &    0.005         &    0.006         \\
+Mean in control &    0.635         &    0.635         &    0.661         &    0.661         \\
+SD in control   &    0.421         &    0.481         &    0.344         &    0.380         \\
+\hline\hline
+\multicolumn{5}{p{0.9\linewidth}}{\scriptsize Notes: The table reports intent-to-treat estimates of the campaign’s effect on bednet use during the campaign period, using responses collected between September 1, 2020 and January 31, 2021. Only households owning at least one bednet are included. \(T\) is the treatment indicator. Columns (1) and (3) report pooled individual-level specifications in which the outcome is the share of survey waves with reported bednet use and observations are weighted by the number of valid survey responses, while columns (2) and (4) report longitudinal (panel) specifications at the individual--wave level with wave fixed effects. State fixed effects are included in all columns. Standard errors are clustered at the district level. \sym{*} \(p<0.1\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\)}\\
+\end{tabular}
+}%
+
+}

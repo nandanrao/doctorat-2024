@@ -1,0 +1,436 @@
+% =============================================================================
+% Bibliography entries for Chapter 1 (Introduction) and Chapter 5 (Conclusion).
+% Per-chapter refsections in biblatex mean entries cited elsewhere can be
+% resolved from any \addbibresource'd file, so this file only holds entries
+% that are NOT already in the per-chapter bibs (01/02/03).
+%
+% CURATED bib (this file IS \addbibresource'd in preamble.tex). Entries that
+% originate from Mendeley arrive via bibs/mendeley-intro-conclusion.bib (raw
+% staging export, NOT loaded) and are cleaned before being copied in here —
+% see the "Cleaned from Mendeley export" section below. Keep the Mendeley
+% citation keys so future re-exports map by key.
+% =============================================================================
+
+@book{Cochran1977,
+  author    = {Cochran, William G.},
+  title     = {Sampling Techniques},
+  edition   = {3},
+  year      = {1977},
+  publisher = {John Wiley \& Sons},
+  address   = {New York}
+}
+
+% Placeholder kept so the build is robust if a section temporarily has no
+% real citations. Safe to remove once both integrative chapters are final.
+@misc{Placeholder00,
+  author       = {Placeholder Author},
+  title        = {Placeholder reference for intro/conclusion},
+  year         = {2026},
+  howpublished = {Placeholder -- to be replaced when intro/conclusion are written}
+}
+
+% Migrated from 2023/presentation/bibs/adaptive-design.bib.
+% Anchor for sequential-decision framing in §1.3 (Theme 1).
+@article{Kasy2021,
+  author  = {Kasy, Maximilian and Sautmann, Anja},
+  title   = {{Adaptive Treatment Assignment in Experiments for Policy Choice}},
+  journal = {Econometrica},
+  volume  = {89},
+  number  = {1},
+  pages   = {113--132},
+  year    = {2021},
+  doi     = {10.3982/ecta17527},
+  issn    = {0012-9682}
+}
+
+% =============================================================================
+% ENTRIES ADDED FROM LITERATURE-REVIEW SESSION (2026-05-21)
+% Four open gaps from anchoring.md: Lewis-Rao power, survey mode effects,
+% transparency standards, feed-experiment structural comparables.
+% =============================================================================
+
+% §5.2 limitations — cautionary-power / statistical challenge of measuring
+% advertising effects; the central "Lewis-Rao tradition" anchor.
+@article{LewisRao2015,
+  author    = {Lewis, Randall A. and Rao, Justin M.},
+  title     = {The Unfavorable Economics of Measuring the Returns to Advertising},
+  journal   = {The Quarterly Journal of Economics},
+  year      = {2015},
+  volume    = {130},
+  number    = {4},
+  pages     = {1941--1973},
+  doi       = {10.1093/qje/qjv023},
+  publisher = {Oxford University Press}
+}
+
+% §5.2 limitations — survey mode effects (chatbot vs web) in social-media-
+% recruited experiments; closest match to the Bebbo chatbot-survey setup.
+% Published in J. Development Economics — field-appropriate.
+@article{beam2023socialmedia,
+  author  = {Beam, Emily A.},
+  title   = {Social media as a recruitment and data collection tool:
+             Experimental evidence on the relative effectiveness of web
+             surveys and chatbots},
+  journal = {Journal of Development Economics},
+  year    = {2023},
+  volume  = {162},
+  pages   = {103069},
+  doi     = {10.1016/j.jdeveco.2023.103069}
+}
+
+% §5.2 limitations — canonical Couper-authored experiment on mobile vs. PC web
+% mode effects in a probability panel; methodological authority for mode×measurement.
+% NOTE: PDF paywalled at OUP; free to read at https://academic.oup.com/poq/article/81/S1/280/3091905
+@article{antoun2017mobile,
+  author  = {Antoun, Christopher and Couper, Mick P. and Conrad, Frederick G.},
+  title   = {Effects of Mobile versus {PC} Web on Survey Response Quality:
+             {A} Crossover Experiment in a Probability Web Panel},
+  journal = {Public Opinion Quarterly},
+  year    = {2017},
+  volume  = {81},
+  number  = {S1},
+  pages   = {280--306},
+  doi     = {10.1093/poq/nfw088}
+}
+
+% §5.3 future directions — foundational proposal for structural independence in
+% researcher-platform collaborations (Social Science One model); canonical post-
+% Cambridge-Analytica reference for institutional transparency safeguards.
+@article{king2020partnerships,
+  author  = {King, Gary and Persily, Nathaniel},
+  title   = {A New Model for Industry-Academic Partnerships},
+  journal = {PS: Political Science and Politics},
+  year    = {2020},
+  volume  = {53},
+  number  = {4},
+  pages   = {703--709},
+  doi     = {10.1017/S1049096519001021}
+}
+
+% §5.3 future directions — Turner et al. (2025) PNAS is the PRIMARY recommendation
+% but is paywalled. This entry included for completeness; access via institutional
+% login at https://www.pnas.org/doi/10.1073/pnas.2501819122 or PMC12718299.
+% Uses Meta 2020 Election Project as case study; argues for auditability standards
+% in ad-API experiments (undisclosed algorithmic changes, design restrictions, etc).
+@article{turner2025transparency,
+  author  = {Turner, Georgia and Anderson, Ian and Fassi, Luisa},
+  title   = {We need transparency standards for social media research that involves companies},
+  journal = {Proceedings of the National Academy of Sciences},
+  year    = {2025},
+  volume  = {122},
+  number  = {50},
+  pages   = {e2501819122},
+  doi     = {10.1073/pnas.2501819122}
+}
+
+% §1.3.2 / §5.2 — cluster RCT where Facebook ad IS the treatment (COVID-19
+% travel-reduction campaign); geo-targeted, sequential delivery. Structurally
+% closest published precedent to the thesis "feed experiment" design.
+@article{Breza2021,
+  author  = {Breza, Emily and Stanford, Fatima Cody and Alsan, Marcella and
+             Alsan, Burak and Banerjee, Abhijit and Chandrasekhar, Arun G. and
+             Eichmeyer, Sarah and Glushko, Traci and Goldsmith-Pinkham, Paul
+             and Holland, Kelly and Hoppe, Emily and Karnani, Mohit and Liegl,
+             Sarah and Loisel, Tristan and Ogbu-Nwobodo, Lucy and Olken,
+             Benjamin A. and Torres, Carlos and Vautrey, Pierre-Luc and
+             Warner, Erica and Wootton, Susan and Duflo, Esther},
+  title   = {Effects of a large-scale social media advertising campaign on
+             holiday travel and {COVID}-19 infections: a cluster randomized
+             controlled trial},
+  journal = {Nature Medicine},
+  year    = {2021},
+  volume  = {27},
+  number  = {9},
+  pages   = {1622--1628},
+  doi     = {10.1038/s41591-021-01487-3}
+}
+
+% §1.3.2 — follow-up to Breza2021 by same team; two-country (US + France)
+% cluster RCT of Facebook vaccination-encouragement ads; null after Omicron.
+@article{Ho2023,
+  author  = {Ho, Lisa and Breza, Emily and Banerjee, Abhijit and Chandrasekhar,
+             Arun G. and Stanford, Fatima Cody and Fior, Renato and
+             Goldsmith-Pinkham, Paul and Holland, Kelly and Hoppe, Emily and
+             Jean, Louis-Ma{\"e}l and Ogbu-Nwobodo, Lucy and Olken, Benjamin A.
+             and Torres, Carlos and Vautrey, Pierre-Luc and Warner, Erica and
+             Duflo, Esther and Alsan, Marcella},
+  title   = {The impact of large-scale social media advertising campaigns on
+             {COVID}-19 vaccination: {Evidence} from two randomized controlled
+             trials},
+  journal = {AEA Papers and Proceedings},
+  year    = {2023},
+  volume  = {113},
+  pages   = {653--658},
+  doi     = {10.1257/pandp.20231112}
+}
+
+% =============================================================================
+% PREVIOUSLY MIGRATED ENTRIES
+% =============================================================================
+
+
+% =============================================================================
+% ENTRIES ADDED FOR 00b-INTRODUCTION (EV-first framing, platform tension)
+% =============================================================================
+
+% --- §2.2: Algorithmic targeting and platform representativity bias -----------
+
+@inproceedings{Ali2019,
+  author    = {Ali, Muhammad and Sapiezynski, Piotr and Bogen, Miranda and
+               Korolova, Aleksandra and Mislove, Alan and Rieke, Aaron},
+  title     = {Discrimination through optimization: How {Facebook}'s ad delivery
+               can lead to biased outcomes},
+  booktitle = {Proceedings of the ACM Conference on Fairness, Accountability,
+               and Transparency (FAccT 2019)},
+  pages     = {27--38},
+  year      = {2019},
+  publisher = {ACM},
+  doi       = {10.1145/3287560.3287589}
+}
+
+@article{Boegershausen2025,
+  author  = {Boegershausen, Johannes and Cornil, Yann and Yi, Sangsuk and
+             Hardisty, David J.},
+  title   = {On the persistent mischaracterization of {Google} and {Facebook}
+             {A/B} tests: How to conduct and report online platform studies},
+  journal = {International Journal of Research in Marketing},
+  volume  = {42},
+  number  = {1},
+  pages   = {1--21},
+  year    = {2025}
+}
+
+@misc{Burtch2025,
+  author  = {Burtch, Gordon and Moakler, Robert and Gordon, Brett R. and
+             Zhang, Ping and Hill, Shawndra},
+  title   = {Characterizing and minimizing divergent delivery in {Meta}
+             advertising experiments},
+  howpublished = {arXiv:2508.21251},
+  year    = {2025},
+  note    = {LIT GAP: verify arXiv version, publisher, and final status}
+}
+
+@inproceedings{Koenecke2023,
+  author    = {Koenecke, Allison and Giannella, Eric and Willer, Robb and
+               Goel, Sharad},
+  title     = {Popular support for balancing equity and efficiency in resource
+               allocation: A case study in online advertising to increase
+               welfare program awareness},
+  booktitle = {Proceedings of the International AAAI Conference on Web and
+               Social Media (ICWSM 2023)},
+  volume    = {17},
+  pages     = {538--549},
+  year      = {2023}
+}
+
+@article{lambrecht2019algorithmic,
+  author  = {Lambrecht, Anja and Tucker, Catherine},
+  title   = {Algorithmic bias? {A}n empirical study of apparent gender-based
+             discrimination in the display of {STEM} career ads},
+  journal = {Management Science},
+  volume  = {65},
+  number  = {7},
+  pages   = {2966--2981},
+  year    = {2019},
+  doi     = {10.1287/mnsc.2018.3093}
+}
+
+@inproceedings{sapiezynski2022algorithms,
+  author    = {Sapiezynski, Piotr and Ghosh, Avijit and Kaplan, Levi and
+               Rieke, Aaron and Mislove, Alan},
+  title     = {Algorithms that ``don't see color'': Measuring biases in
+               lookalike and special ad audiences},
+  booktitle = {Proceedings of the 2022 AAAI/ACM Conference on AI, Ethics,
+               and Society (AIES 2022)},
+  pages     = {609--616},
+  year      = {2022},
+  publisher = {ACM},
+  doi       = {10.1145/3514094.3534195}
+}
+
+@article{Sapanel2023,
+  author  = {Sapanel, Yoann and Tadeo, Xavier and Brenna, Connor T. A. and
+             Remus, Alexandra and Koerber, Florian and Cloutier, L. Martin and
+             Tremblay, Gabriel and Blasiak, Agata and Hardesty, C. L. and
+             Yoong, Joanne and Ho, Dean},
+  title   = {Economic evaluation associated with clinical-grade mobile
+             app-based digital therapeutic interventions: Systematic review},
+  journal = {Journal of Medical Internet Research},
+  volume  = {25},
+  pages   = {e47094},
+  year    = {2023},
+  doi     = {10.2196/47094},
+  note    = {LIT GAP: verify exact DOI}
+}
+
+@article{Bremer2023,
+  author  = {Bremer, Whitney and Sarker, Abeed},
+  title   = {Recruitment and retention in mobile application-based intervention
+             studies: A critical synopsis of challenges and opportunities},
+  journal = {Informatics for Health and Social Care},
+  volume  = {48},
+  number  = {2},
+  pages   = {139--153},
+  year    = {2023},
+  doi     = {10.1080/17538157.2022.2097079},
+  note    = {LIT GAP: verify exact DOI}
+}
+
+@article{Bradlow1998,
+  author  = {Bradlow, Eric T.},
+  title   = {Encouragement designs: An approach to self-selected samples in an
+             experimental design},
+  journal = {Marketing Letters},
+  volume  = {9},
+  number  = {4},
+  pages   = {395--407},
+  year    = {1998},
+  doi     = {10.1023/A:1008039614011},
+  note    = {LIT GAP: verify exact DOI}
+}
+
+% --- §3.2: Parenting app literature -------------------------------------------
+
+@article{Jaggi2025,
+  author  = {J{\"a}ggi, Lena and Hartinger, Stella M. and Fink, G{\"u}nther
+             and McCoy, Dana C. and others},
+  title   = {Parenting in the digital age: A scoping review of digital early
+             childhood parenting interventions in low- and middle-income
+             countries ({LMIC})},
+  journal = {Public Health Reviews},
+  volume  = {46},
+  year    = {2025},
+  note    = {LIT GAP: verify full citation --- journal, volume, pages, DOI,
+             and complete author list}
+}
+
+% --- §3.3: Demand characteristics --------------------------------------------
+
+@article{Corneille2023,
+  author  = {Corneille, Olivier and Lush, Peter},
+  title   = {Sixty years after {Orne}'s {American Psychologist} article: A
+             conceptual framework for subjective experiences elicited by
+             demand characteristics},
+  journal = {Personality and Social Psychology Review},
+  volume  = {27},
+  number  = {1},
+  pages   = {83--106},
+  year    = {2023},
+  doi     = {10.1177/10888683221104376},
+  note    = {LIT GAP: verify exact DOI}
+}
+
+@article{deQuidt2018,
+  author  = {de Quidt, Jonathan and Haushofer, Johannes and Roth, Christopher},
+  title   = {Measuring and bounding experimenter demand},
+  journal = {American Economic Review},
+  volume  = {108},
+  number  = {11},
+  pages   = {3266--3302},
+  year    = {2018},
+  doi     = {10.1257/aer.20171315},
+  note    = {LIT GAP: verify exact DOI}
+}
+
+% =============================================================================
+% Cleaned from Mendeley export (bibs/mendeley-intro-conclusion.bib).
+% Keys match Mendeley's; metadata verified/corrected against the published
+% record (scite + publisher) — fixes over the raw export are noted inline.
+% =============================================================================
+
+@article{Goldfarb2019,
+  author  = {Goldfarb, Avi and Tucker, Catherine},
+  title   = {Digital Economics},
+  journal = {Journal of Economic Literature},
+  volume  = {57},
+  number  = {1},
+  pages   = {3--43},
+  year    = {2019},
+  doi     = {10.1257/jel.20171452}
+}
+
+@article{Aker2010,
+  author  = {Aker, Jenny C. and Mbiti, Isaac M.},
+  title   = {Mobile Phones and Economic Development in Africa},
+  journal = {Journal of Economic Perspectives},
+  volume  = {24},
+  number  = {3},
+  pages   = {207--232},
+  year    = {2010},
+  doi     = {10.1257/jep.24.3.207}
+}
+
+@article{Mosleh2022,
+  author  = {Mosleh, Mohsen and Pennycook, Gordon and Rand, David G.},
+  title   = {Field Experiments on Social Media},
+  journal = {Current Directions in Psychological Science},
+  volume  = {31},
+  number  = {1},
+  pages   = {69--75},
+  year    = {2022},
+  doi     = {10.1177/09637214211054761}
+}
+
+% Cleaned: raw export had junk title ("... Approach Corresponding Author :")
+% and pages {1--9}; corrected to article id e125, JMIR 19(4).
+@article{Carroll,
+  author  = {Carroll, Jennifer K. and Moorhead, Anne and Bond, Raymond and
+             LeBlanc, William G. and Petrella, Robert J. and Fiscella, Kevin},
+  title   = {Who Uses Mobile Phone Health Apps and Does Use Matter? {A}
+             Secondary Data Analytics Approach},
+  journal = {Journal of Medical Internet Research},
+  volume  = {19},
+  number  = {4},
+  pages   = {e125},
+  year    = {2017},
+  doi     = {10.2196/jmir.5604}
+}
+
+% Cleaned: key is Mendeley's "Pratap2019" but the paper is 2020 (published
+% 2020-02-17); raw export had year 2019, spaced title "100 , 000", pages {1--10}.
+@article{Pratap2019,
+  author  = {Pratap, Abhishek and Neto, Elias Chaibub and Snyder, Phil and
+             Stepnowsky, Carl and Elhadad, No{\'e}mie and Grant, David and
+             others},
+  title   = {Indicators of Retention in Remote Digital Health Studies: A
+             Cross-Study Evaluation of 100,000 Participants},
+  journal = {npj Digital Medicine},
+  volume  = {3},
+  number  = {1},
+  pages   = {21},
+  year    = {2020},
+  doi     = {10.1038/s41746-020-0224-8}
+}
+
+@article{Athey2023,
+  author  = {Athey, Susan and Grabarz, Kristen and Luca, Michael and Wernerfelt, Nils},
+  title   = {Digital Public Health Interventions at Scale: The Impact of Social
+             Media Advertising on Beliefs and Outcomes Related to {COVID} Vaccines},
+  journal = {Proceedings of the National Academy of Sciences},
+  volume  = {120},
+  number  = {5},
+  pages   = {e2208110120},
+  year    = {2023},
+  doi     = {10.1073/pnas.2208110120}
+}
+
+@article{Zhang2022,
+  author        = {Zhang, Walter W. and Misra, Sanjog},
+  title         = {{Coarse Personalization}},
+  year          = {2022},
+  journal       = {arXiv preprint arXiv:2204.05793},
+  archivePrefix = {arXiv},
+  eprint        = {2204.05793},
+  primaryClass  = {econ.EM}
+}
+
+@inproceedings{Atan2019,
+  author    = {Atan, Onur and Zame, William R. and van der Schaar, Mihaela},
+  title     = {{Sequential Patient Recruitment and Allocation for Adaptive Clinical Trials}},
+  booktitle = {Proceedings of the Twenty-Second International Conference on Artificial Intelligence and Statistics (AISTATS)},
+  series    = {Proceedings of Machine Learning Research},
+  volume    = {89},
+  pages     = {1891--1900},
+  year      = {2019},
+  publisher = {PMLR}
+}

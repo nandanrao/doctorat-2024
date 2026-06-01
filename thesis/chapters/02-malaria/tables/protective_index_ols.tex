@@ -1,0 +1,21 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\adjustbox{max width=\textwidth}{%
+\begin{tabular}{l*{3}{c}}
+\hline\hline
+                &\multicolumn{1}{c}{\shortstack{Share of times any member\\used long sleeves}}&\multicolumn{1}{c}{\shortstack{Share of times any member\\used body/wall sprays}}&\multicolumn{1}{c}{\shortstack{Protective Behaviors\\ Index}}\\\cmidrule(lr){2-2}\cmidrule(lr){3-3}\cmidrule(lr){4-4}
+                &      (1)         &      (2)         &      (3)         \\
+\hline
+T               &   -0.005         &   -0.020         &    0.004         \\
+                &  (0.019)         &  (0.023)         &  (0.049)         \\
+\hline
+Observations    &\num{5174}         &\num{2351}         &\num{5201}         \\
+Adj. R-squared  &    0.014         &    0.002         &    0.002         \\
+Mean in control &    0.642         &    0.410         &    0.069         \\
+SD in control   &    0.404         &    0.485         &    0.937         \\
+\hline\hline
+\multicolumn{4}{p{0.9\linewidth}}{\scriptsize Notes: The table reports intent-to-treat estimates of the campaign’s effect on alternative protective behaviors during the campaign period, using responses collected from September 1, 2020 to January 31, 2021. Each observation is an individual and observations are weighted by the number of survey waves the respondent completed in this period. \(T\) is the treatment indicator. Columns (1) and (2) report the share survey waves with reported use of long-sleeved clothing and mosquito sprays, respectively, by any household member. Column (3) reports a standardized protective behaviors index constructed using Principal Component Analysis applied to individual bednet use, the share of household members using bednets, and individual use of mosquito spray and long-sleeved clothing. Since some components are missing for a subset of observations, missing values are imputed at the sample mean in constructing the index.  Standard errors are clustered at the district level. \sym{*} \(p<0.1\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\).}\\
+\end{tabular}
+}%
+
+}

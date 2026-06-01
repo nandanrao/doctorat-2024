@@ -1,0 +1,28 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\adjustbox{max width=\textwidth}{%
+\begin{tabular}{l*{8}{c}}
+\hline\hline
+                &\multicolumn{4}{c}{Share of respondents who used bednet}                   &\multicolumn{4}{c}{Share of HH members who used bednet}                    \\\cmidrule(lr){2-5}\cmidrule(lr){6-9}
+                &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         &\multicolumn{1}{c}{(5)}         &\multicolumn{1}{c}{(6)}         &\multicolumn{1}{c}{(7)}         &\multicolumn{1}{c}{(8)}         \\
+                &     Full         &     Full         &     Full         &Solid house         &     Full         &     Full         &     Full         &Solid house         \\
+\hline
+T               &    0.010         &    0.013         &    0.013         &    0.015         &    0.004         &    0.009         &    0.004         &    0.014         \\
+                &  (0.019)         &  (0.018)         &  (0.021)         &  (0.022)         &  (0.017)         &  (0.016)         &  (0.019)         &  (0.021)         \\
+T $\times$ Solid house&                  &                  &   -0.000         &                  &                  &                  &    0.010         &                  \\
+                &                  &                  &  (0.023)         &                  &                  &                  &  (0.024)         &                  \\
+Solid house     &                  &   -0.039\sym{***}&   -0.039\sym{**} &                  &                  &   -0.049\sym{***}&   -0.054\sym{***}&                  \\
+                &                  &  (0.013)         &  (0.017)         &                  &                  &  (0.013)         &  (0.017)         &                  \\
+Individual controls&                  &$\checkmark$         &$\checkmark$         &$\checkmark$         &                  &$\checkmark$         &$\checkmark$         &$\checkmark$         \\
+Cluster controls&                  &$\checkmark$         &$\checkmark$         &$\checkmark$         &                  &$\checkmark$         &$\checkmark$         &$\checkmark$         \\
+\hline
+Observations    &\num{5544}         &\num{5544}         &\num{5544}         &\num{2790}         &\num{5457}         &\num{5457}         &\num{5457}         &\num{2762}         \\
+Adj. R-squared  &    0.002         &    0.015         &    0.015         &    0.013         &    0.002         &    0.022         &    0.022         &    0.020         \\
+Mean in control &    0.690         &    0.690         &    0.690         &    0.662         &    0.684         &    0.684         &    0.684         &    0.654         \\
+SD in control   &    0.463         &    0.463         &    0.463         &    0.473         &    0.374         &    0.374         &    0.374         &    0.390         \\
+\hline\hline
+\multicolumn{9}{p{1.02\linewidth}}{\scriptsize Notes: Each observation is an individual. Responses collected in the baseline survey from July 1, 2020 to August 19, 2021 are included. Only households with at least one bednet are included. T is the treatment indicator. Solid house is a binary indicator equal to 1 if the individual lives in a dwelling made of stones, bricks, cement or concrete. State fixed-effects are included in all specifications. Individual controls include gender, age, household size, caste, education, distance to the medical center, employment and student status, religion, presence of pregnant woman in the house, ownership of an air conditioner and 5-year malaria incidence at baseline. Cluster controls are reported in Table \ref{tab:districts-balance}. Standard errors are clustered at the district level. \sym{*} \(p<0.1\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\)}\\
+\end{tabular}
+}%
+
+}

@@ -1,0 +1,26 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\adjustbox{max width=\textwidth}{%
+\begin{tabular}{l*{9}{c}}
+\hline\hline
+                &\multicolumn{3}{c}{Overall incidence}                   &\multicolumn{3}{c}{Urban areas}                         &\multicolumn{3}{c}{Rural areas}                         \\\cmidrule(lr){2-4}\cmidrule(lr){5-7}\cmidrule(lr){8-10}
+                &      (1)         &      (2)         &      (3)         &      (4)         &      (5)         &      (6)         &      (7)         &      (8)         &      (9)         \\
+\hline
+T $\times$ Post &    -3.28         &    -5.80         &    -4.88         &    -6.10\sym{*}  &    -6.96\sym{**} &    -6.21\sym{**} &     0.99         &    -1.47         &    -2.24         \\
+                &   (6.34)         &   (6.23)         &   (5.31)         &   (3.41)         &   (2.92)         &   (2.86)         &   (6.02)         &   (6.37)         &   (5.79)         \\
+Subdistrict FE  &$\checkmark$         &$\checkmark$         &$\checkmark$         &$\checkmark$         &$\checkmark$         &$\checkmark$         &$\checkmark$         &$\checkmark$         &$\checkmark$         \\
+Month and year FE&$\checkmark$         &$\checkmark$         &$\checkmark$         &$\checkmark$         &$\checkmark$         &$\checkmark$         &$\checkmark$         &$\checkmark$         &$\checkmark$         \\
+District controls&                  &$\checkmark$         &$\checkmark$         &                  &$\checkmark$         &$\checkmark$         &                  &$\checkmark$         &$\checkmark$         \\
+Subdistrict controls&                  &                  &$\checkmark$         &                  &                  &$\checkmark$         &                  &                  &$\checkmark$         \\
+\hline
+Observations    &\num{1499}         &\num{1499}         &\num{1499}         &\num{791}         &\num{791}         &\num{791}         &\num{1338}         &\num{1338}         &\num{1338}         \\
+Adj. R-squared  &    0.189         &    0.187         &    0.187         &    0.451         &    0.455         &    0.461         &    0.151         &    0.149         &    0.148         \\
+Mean at baseline&    35.03         &    35.03         &    35.03         &    18.81         &    18.81         &    18.81         &    27.76         &    27.76         &    27.76         \\
+SD at baseline  &   108.28         &   108.28         &   108.28         &    38.53         &    38.53         &    38.53         &   105.77         &   105.77         &   105.77         \\
+\hline\hline
+\multicolumn{10}{p{0.92\linewidth}}{\scriptsize Notes: Each observation is a subdistrict-month-year. The panel spans from April 2020 to May 2021. T takes value 1 if the subdistrict belongs to a treated district. Post takes value 1 after August 2020, i.e. when the Facebook campaign started.  District controls include total population from the Census as well as the shares of baseline survey repondents living in non-solid dwellings, with university degree, sleeping under mosquito nets, and reporting any malaria cases in the last 5 years and 2 weeks, all interacted with Post. Subdistrict controls include: subdistrict area, share of urban population, elevation, terrain ruggedness and distance to the state capital, all interacted with Post. All regressions include state fixed-effects interacted with Post. Subdistricts often include both urban and rural areas. As a result, malaria incidence is reported separately for urban and rural health facilities within the same subdistrict, and the corresponding sample sizes do not necessarily sum to the total number of subdistricts. Standard errors are clustered at the district level. Baseline Mean and SD refer to observations from treated subdistricts in July-August 2020. Data come from the Indian Health Management Information System. \sym{*} \(p<0.1\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\)}\\
+\end{tabular}
+}%
+
+}
+

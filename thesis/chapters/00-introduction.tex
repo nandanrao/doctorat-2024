@@ -1,0 +1,210 @@
+\chapter{Introduction}
+\label{ch:introduction}
+
+\section{Motivation}
+\label{sec:intro:motivation}
+
+
+
+
+MAJOR THEME IS ACTUALLY EXTERNAL VALIDITY --> feed experiment is an example of that. Also, to some degree, mobile app in Bebbo... 
+
+This stratification by characteristic provides better external validity for treatment effect estimates and population estimates. 
+
+
+
+
+
+
+Social media advertising presents two distinct opportunities for social science researchers: as both a mechanism to reach study participants and as an intervention mechanism to change individual behavior. 
+
+
+
+
+This thesis presents two methodologies for collecting survey data and running RCTs, while using those methodologies to run studies and present findings in the health and development economics literature. 
+
+
+
+RECRUITMENT 
+
+
+We can consider two regimes in which recruitment may be interesting (while more can be imagined, these are two that are imminently valuable to economists): 
+
+1. Recruiting survey respondents for surveys (panel, repeated cross-section, or one-off)
+
+2. Recruiting study participants for RCTs or experiments. 
+
+Naturally, these two can often interact (a panel survey may be used as the outcome data in an RCT, an RCT may consist entirely within a survey, etc). For the sake of language, we'll consider any survey itself to be a study, while admitting that most actual studies in economics require a panel data to generate a time series, or direct randomization within the survey. 
+
+
+Recruitment of study participants consists of two considerations: 
+
+1. Engaging and gaining the acceptnace of humans willing to put time and energy into participation. This in turn consists of: 
+
+1a. Setting up an incentive or request. 
+1b. Finding people willing to do what you ask, in return for the incentive. 
+1c. Communicating the project to them. 
+1d. Eliciting consent and bringing them into the project 
+1e. Providing them the incentive for the project. 
+
+
+This is a logistical challenge, not a methodological one. While moving this process from the physical world to the online world does not, in and of itself, constitute a methodological challenge, doing so in a way that preserves certain statistical properties of interest for population parameter estimateion and external validity, and therefore policy relevance, does encounter methodological challenges and opportunities in the digital realm that have not been solved in the literature. 
+
+WHY REPRESENTATIVE IS OF INTEREST?
+
+In particular, for the population parameter estimation or external validity (or subgroup analysis), economists may desire to recruit a variety of participants to match a particular joint distribution, considered over a set of demographics or characteristics of interest. For example, to properly estimate a population parameter, we need a sample that is representative of the population across the covariates that cause our parameter. (NOTE: think about the causal relation. Also prove / cite -- potential your original research plan is useful for this actually). 
+
+An important part of external validity is also driven by the ability to represent the external population of interest in a researchers sample (cite / expand). 
+
+Critiques of the focus on RCTs cite external validity as the problem. 
+
+A representative sample is one way to improve external validity. Similar, the ability to test in the population of interest or test across populations (accross countries). 
+
+But collecting a representative sample in a field RCT is expensive. Many economists rely instead on available online panels or tools (MTurk, Prolific), some of which offer representiveness for a cost, and many of which may not be available in the countries of interest. 
+
+
+
+
+---------------
+
+Maybe that part is all overkill. I need to get the reader to see that a core problem in economics, which is what I faced and solved is: 
+
+1. I want to recruit participants. 
+2. I want stratification for representativity and/or subgroup analysis  
+3. I have a budget constraint. 
+
+The question is: is this problem laid out in the literature or do I just need to try to prove it exists through first principals somehow? Development economics is the place to look, of course.  
+
+Then we make the case that:
+
+To solve the problem properly under a budget constraint, we need to define a goal and optimize it subject to that budget constraint. 
+
+We consider the goal of recovering a population parameter, useful for generic survey panel data, and show that we can solve... 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+In this thesis, I develop two distinct, novel methodologies related to recruitment of study participants and online RCT design. I then show that these methodologies work: around the world, at scale, affordably, and effectively. This contribution to the literature allows future researchers to use these methodologies for their own empirical studies, as well as build upon these methodologies within the areas of survey recruitment and intervention design. 
+
+Additionally, through studies that these methodologies have enabled, I make contributions to the literature in development and health economics related to malaria prevention and public health ad campaigns, as well as parental education and early-childhood development and mobile app interventions. 
+
+--------
+
+
+
+the apparatus for recovering population-grade estimates from finite samples: stratified sampling, post-stratification, calibration weights, and the cost-aware allocation rules that date to \citet{Neyman1934}. 
+
+
+From the randomized-trial tradition  --- the design vocabulary for credible causal inference: cluster randomization, encouragement designs, matched pairs, and the ITT--LATE distinctions formalised through the potential-outcomes framework \citep{Imbens2015,Hayes2017}. 
+
+--------
+
+
+
+The set of users reachable through the platform is not enumerable; the platform itself decides who sees which ad and the decision rule is not exposed to the researcher; and the realised cost per recruit is observed only as the campaign progresses. 
+
+
+Yet the same channel that introduces these frictions opens a remarkable operational possibility: a single ad pipeline can recruit, randomize, treat, and (in part) measure outcomes at a fraction of the cost of an offline field study. Caregivers in a dozen countries can be enrolled in a single week; a district-cluster randomized trial reduces from a fleet of field teams to a set of geo-targeted ad campaigns.
+
+
+The methodological question this thesis takes up is whether the classical guarantees of empirical economics --- unbiasedness of population estimates, identification of causal effects under transparent assumptions, representativeness arguments that survive review --- can be recovered in this setting. 
+
+Three studies develop the question. 
+
+
+One is purely methodological: how to recruit a representative sample through a non-probability digital frame when the cost of each recruit is observed only sequentially. 
+
+
+
+The other two are impact evaluations --- of a malaria-prevention behavioural intervention in rural India, and of an early-childhood-development app distributed across multiple countries --- that would be cost-infeasible to conduct offline at the scale required. 
+
+
+Together they trace the limits, and the possibilities, of empirical economics conducted entirely through digital advertising.
+
+\section{A methodological asymmetry}
+\label{sec:intro:asymmetry}
+
+The unifying claim of this thesis is an \emph{asymmetry}.
+
+For survey methodology, digital recruitment is a \textbf{problem}. The platform user base does not constitute a sampling frame in the classical sense; inclusion probabilities are not defined; the auction-based delivery mechanism is opaque; and, if per-stratum targets are to be used, the costs vary widely and are realised during a campaign rather than known in advance. The classical anchors --- Neyman optimal allocation, design-based estimation, post-stratification --- remain correct but cannot be applied off the shelf
+
+ \citep{mercer2017weighting,Goel2015,Wang2015}. 
+
+They must be re-derived for a setting in which the inclusion mechanism is opaque, the allocation problem is sequential, and weights are constructed against a frame the researcher does not enumerate.
+
+For experimental design, the same channel is an \textbf{opportunity}. Geo-targeted ad delivery collapses the operational cost of cluster-randomized trials by orders of magnitude, making cluster-RCT designs practical for behavioural interventions that previously could not justify the fieldwork. More strikingly, the ad pipeline can simultaneously serve as the assignment mechanism, the treatment-delivery channel, and the outcome-measurement instrument --- a configuration this thesis labels a \emph{feed experiment} (Chapter~\ref{ch:malaria}). The identification logic of these designs is unchanged from the cluster-RCT and encouragement-design canon \citep{Hayes2017,Imbens2015}; what is transformed is the operational logic.
+
+The asymmetry is the thesis statement, not a topic sentence. The papers that follow develop methods for each side --- an adaptive allocation procedure for the survey-recruitment side, two experimental designs for the field-experimental side --- and apply them to two public-health and early-childhood interventions. Across the three studies a single object recurs: classical empirical-economics guarantees, recovered in a setting where neither the sampling frame nor the treatment delivery is fully under researcher control.
+
+\section{Theme 1 --- Survey research under online recruitment}
+\label{sec:intro:theme1}
+
+The first theme treats digital recruitment as a survey-methodology problem. Three features of the digital setting break the classical apparatus.
+
+\paragraph{Non-probability frames.} The set of platform users does not enumerate a population in the design-based sense. Modern treatments of the non-probability-sample problem \citep{mercer2017weighting,Goel2015,Wang2015} establish that inference from such samples is feasible but conditional on auxiliary information used to model the inclusion mechanism --- typically through post-stratification or model-based calibration \citep{Gelman1997,deville1992calibration,lee2009estimation}. The methodological contribution of Chapter~\ref{ch:survey-sampling} sits in this line: it constructs an allocation procedure designed to produce a sample that can be post-stratified with defensible weights, rather than one that pretends to design-based unbiasedness.
+
+\paragraph{Opaque inclusion mechanism.} On an ad platform, the assignment of impressions to users is determined by the platform's auction and is not exposed to the researcher. Where classical stratified sampling supposes that the researcher draws from each stratum, here the researcher can only \emph{bid} for delivery to each stratum and observe what arrives. Recruitment becomes an indirect-control problem, with implications for how stratum definitions, bid amounts, and creative variation must be jointly chosen to obtain a target sample composition.
+
+\paragraph{Sequentially observed costs.} The cost per respondent in a given stratum is not known in advance; it is realised during the campaign. Neyman's optimal-allocation rule --- which trades stratum variance against stratum cost --- is therefore not a static optimization but a sequential decision problem. Chapter~\ref{ch:survey-sampling} formalises this as an adaptive allocation problem and characterises a procedure that converges toward the Neyman optimum as costs are revealed. The sequential-decision framing draws on the recent adaptive-experiment literature \citep{Kasy2021,Caria2020,Carneiro2020}, which develops adaptive-allocation tools for randomized trials; the contribution is to import that machinery into the survey-allocation problem and to combine it with a post-stratification estimator robust to non-probability inclusion.
+
+This is the \textbf{core Theme-1 contribution} of the thesis. It is developed in Chapter~\ref{ch:survey-sampling} and used as the recruitment apparatus in Chapters~\ref{ch:malaria} and~\ref{ch:bebbo}. The cheap longitudinal measurement that digital recruitment affords --- panel waves at marginal cost --- is treated as an ability of the channel rather than a methodological contribution; the panel structure of Chapter~\ref{ch:malaria} is what makes that ability concrete.
+
+\section{Theme 2 --- Field-experimental designs in the digital setting}
+\label{sec:intro:theme2}
+
+The second theme treats the same channel as an opportunity for experimental design. The thesis develops two design types, distinct in kind.
+
+\paragraph{Cluster-randomized ad campaigns.} The operational obstacle to cluster RCTs has historically been logistical: $k$ clusters require $k$ field operations. Geo-targeted ad delivery collapses this obstacle. Chapter~\ref{ch:malaria} runs a district-level cluster-randomized trial in rural India in which the treatment is a behaviour-change advertisement promoting bed-net use against malaria, delivered through Meta's ad platform. The identification logic is the standard cluster-RCT analysis \citep{Hayes2017,Imai2009}; the design innovation lies on top of it.
+
+\paragraph{Feed experiments.} The same ad pipeline that assigns subjects to clusters can also be used to deliver an individual-level remarketing layer to the same users, and the platform itself records exposure (and, in some configurations, downstream outcome events). A \emph{feed experiment} is a cluster RCT augmented in this way: the ad pipeline simultaneously carries assignment, treatment delivery, and a component of outcome measurement. Chapter~\ref{ch:malaria} is the strong-form realisation of this design --- the malaria-prevention ad is itself the treatment, not merely a recruitment instrument. The substantive headline is that the campaign raised reported net use from 69\% to 74\% on average, with the cluster effect concentrated in pucca (durable-material) dwellings; we read this as evidence that the binding constraint in the targeted population was reach rather than persuasion. The grounding for ad-as-treatment as a credible experimental object is provided by \citet{Athey2023}, who establish that platform-delivered ads can produce measurable behavioural change at scale.
+
+\paragraph{Encouragement designs with online recruitment.} A second, methodologically distinct design appears in Chapter~\ref{ch:bebbo}. There, the ad pipeline recruits caregivers across multiple countries and randomly encourages a subset to install an early-childhood-development app (Bebbo); the treatment itself lives off the ad platform, on the user's phone. This is a canonical encouragement design in the Imbens--Rubin tradition \citep{Imbens2015}, with two-sided non-compliance: some encouraged users do not install, and some non-encouraged users install through organic channels. ITT and ToT effects are recovered under the standard monotonicity and exclusion assumptions. The substantive headline is a null on parenting knowledge, confidence, and self-reported practices; we interpret the 76\% day-one app abandonment as evidence that the binding constraint was engagement with the product rather than the content of its lessons.
+
+The two designs cover the two principal modes in which digital ad platforms enter empirical economics as instruments of treatment delivery: as \emph{the treatment itself} (Chapter~\ref{ch:malaria}, the strong form) and as \emph{an encouragement to a treatment delivered elsewhere} (Chapter~\ref{ch:bebbo}, the canonical form). The thesis does not claim that these two designs exhaust the available space; it claims that they are sufficient to anchor the methodological argument and to expose the operational logic the channel introduces.
+
+\section{Contributions and how they nest}
+\label{sec:intro:contributions}
+
+The thesis comprises one methodological contribution and two empirical-design contributions, related as follows.
+
+\begin{enumerate}[leftmargin=*]
+\item \textbf{Top-level claim.} The methodologies of empirical economics --- survey research and randomized field experiments --- can be transposed to a setting in which both recruitment and treatment delivery occur through digital ad platforms, provided the classical apparatus is re-derived under the asymmetry that this channel introduces \emph{problems} for surveys and \emph{opportunities} for experiments.
+
+\item \textbf{Theme 1 --- one contribution.} Chapter~\ref{ch:survey-sampling} develops an adaptive stratified-allocation procedure with post-stratification estimation for survey recruitment through digital ad platforms, under the constraints that inclusion probabilities are not defined and per-stratum costs are observed sequentially. This is the \emph{methodological backbone} of the thesis.
+
+\item \textbf{Theme 2 --- two contributions, distinct in kind.}
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+\item Chapter~\ref{ch:malaria} develops the \emph{feed experiment}: a cluster-randomized trial in which the ad pipeline carries assignment, treatment, and outcome capture, with the ad itself as the experimental stimulus. The substantive application is a malaria-prevention bed-net campaign in rural India.
+\item Chapter~\ref{ch:bebbo} executes an \emph{encouragement design} with online recruitment, two-sided non-compliance, and off-platform treatment, applied to a multi-country evaluation of an early-childhood-development app. This is a classical design re-instantiated in a setting where neither recruitment nor compliance is under researcher control.
+\end{enumerate}
+
+\item \textbf{How the contributions nest.} The Theme-2 contributions depend on the Theme-1 contribution in one direction: the cluster-randomized and encouragement designs of Chapters~\ref{ch:malaria} and~\ref{ch:bebbo} both use the recruitment and stratification apparatus of Chapter~\ref{ch:survey-sampling} to enrol their study populations. Chapter~\ref{ch:survey-sampling}'s methodology, conversely, is developed independently of either application. The thesis is therefore ordered \emph{methodology first, applications second}, even though the chronological order of the underlying projects was the reverse.
+
+\item \textbf{What is \emph{not} a contribution.} Longitudinal panel measurement, while operationally central to Chapter~\ref{ch:malaria}, is not advanced here as a methodological novelty: panel survey methodology long predates digital recruitment, and the contribution of the channel is to make panel waves cheap, not to change their inferential basis. Similarly, the operational system used to coordinate the recruitment and randomization pipelines is named once for completeness but is not the object of the thesis: the object is the methodology that the system makes runnable.
+\end{enumerate}
+
+\section{Roadmap}
+\label{sec:intro:roadmap}
+
+Chapter~\ref{ch:survey-sampling} develops the Theme-1 contribution: the adaptive stratified-allocation procedure and its post-stratification estimator, with simulation evidence and an applied case study of survey recruitment through Meta's ad platform.
+
+Chapter~\ref{ch:malaria} develops the feed experiment: a district-cluster-randomized behaviour-change campaign on bed-net use in rural India, with an individual-level remarketing layer and panel outcome waves. Cluster-level treatment effects are estimated under the standard cluster-RCT framework; remarketing effects are estimated as within-cluster individual-level contrasts.
+
+Chapter~\ref{ch:bebbo} executes the encouragement design: multi-country recruitment of caregivers via Meta, random encouragement to install Bebbo, and ITT/ToT estimation of effects on parenting knowledge and self-reported practices, with attention to attrition and two-sided non-compliance.
+
+Chapter~\ref{ch:conclusion} returns to the asymmetry, draws the cross-paper synthesis, and discusses limitations and the design space the feed-experiment idea opens up for future work.
+
+\printbibliography[heading=subbibliography, title={References for Chapter \thechapter}]
+
+

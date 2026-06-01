@@ -1,0 +1,29 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\adjustbox{max width=\textwidth}{%
+\begin{tabular}{l*{5}{c}}
+\hline\hline
+                &\multicolumn{5}{c}{1 if any HH member had malaria}                                            \\\cmidrule(lr){2-6}
+                &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         &\multicolumn{1}{c}{(5)}         \\
+                &     Full         &     Full         &     Full         &Solid house         &Non-solid house         \\
+\hline
+T               &    0.053         &    0.025         &    0.266         &   -0.616\sym{**} &    0.286         \\
+                &  (0.196)         &  (0.152)         &  (0.192)         &  (0.289)         &  (0.188)         \\
+T $\times$ Solid house&                  &                  &   -0.743\sym{**} &                  &                  \\
+                &                  &                  &  (0.357)         &                  &                  \\
+Solid house     &                  &   -0.378\sym{*}  &   -0.041         &                  &                  \\
+                &                  &  (0.205)         &  (0.273)         &                  &                  \\
+Individual controls&                  &$\checkmark$         &$\checkmark$         &$\checkmark$         &$\checkmark$         \\
+Cluster controls&                  &$\checkmark$         &$\checkmark$         &$\checkmark$         &$\checkmark$         \\
+\hline
+Observations    &\num{3052}         &\num{3052}         &\num{3052}         &\num{1316}         &\num{1736}         \\
+Pseudo R-squared&    0.001         &    0.079         &    0.082         &    0.112         &    0.105         \\
+Marginal effect &    0.003         &    0.001         &    0.014         &   -0.025         &    0.018         \\
+Mean in control &    0.058         &    0.058         &    0.058         &    0.055         &    0.061         \\
+SD in control   &    0.235         &    0.235         &    0.235         &    0.229         &    0.239         \\
+\hline\hline
+\multicolumn{6}{p{0.85\linewidth}}{\scriptsize Each observation is an individual. Responses collected from January 7, 2021 to March 31, 2021 are included. The dependent variable takes value 1 if the respondent/family member has had malaria since August 2020. T is the treatment indicator. Solid house is a binary indicator equal to 1 if the individual lives in a dwelling made of stones, bricks, cement or concrete. State fixed-effects are included in all specifications. Individual controls include gender, age, household size, caste, education, distance to the medical center, employment and student status, religion, presence of pregnant woman in the house, ownership of bednet and of an air conditioner. Cluster controls are reported in Table \ref{tab:districts-balance}. Standard errors are clustered at the district level. \sym{*} \(p<0.1\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\)}\\
+\end{tabular}
+}%
+
+}

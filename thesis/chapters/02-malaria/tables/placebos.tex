@@ -1,0 +1,24 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\adjustbox{max width=\textwidth}{%
+\begin{tabular}{l*{4}{c}}
+\hline\hline
+                &\multicolumn{1}{c}{\shortstack{Share of times respondent \\ used bednet (baseline)}}&\multicolumn{1}{c}{\shortstack{Share of HH members \\who used bednet (baseline)}}&\multicolumn{2}{c}{\shortstack{Is extremely worried \\ about COVID (post-campaign)}}\\\cmidrule(lr){2-2}\cmidrule(lr){3-3}\cmidrule(lr){4-5}
+                &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         \\
+                &      OLS         &      OLS         &      OLS         &    Logit         \\
+\hline
+T               &    0.010         &    0.004         &   -0.004         &   -0.017         \\
+                &  (0.019)         &  (0.017)         &  (0.018)         &  (0.082)         \\
+\hline
+Observations    &\num{5544}         &\num{5457}         &\num{3050}         &\num{3050}         \\
+Adj. R-squared  &    0.002         &    0.002         &   -0.000         &                  \\
+Pseudo R-squared&                  &                  &                  &    0.000         \\
+Marginal effect &                  &                  &                  &   -0.004         \\
+Mean in control &    0.691         &    0.684         &    0.317         &    0.317         \\
+SD in control   &    0.462         &    0.374         &    0.466         &    0.466         \\
+\hline\hline
+\multicolumn{5}{p{.98\linewidth}}{\scriptsize Notes: The table reports placebo estimates. Columns (1)–(2) use outcomes measured at baseline (pre-campaign) and are restricted to households owning at least one bednet. Columns (3)–(4) use a post-campaign outcome (extremely worried about COVID) that is not plausibly affected by the malaria campaign. \(T\) is the treatment indicator. All regressions include state fixed effects. Standard errors are clustered at the district level. \sym{*} \(p<0.1\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\).}\\
+\end{tabular}
+}%
+
+}

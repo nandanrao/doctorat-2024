@@ -1,0 +1,36 @@
+% =============================================================================
+% Master document for Nandan Rao's PhD thesis.
+% Compendium of three papers + introduction + conclusion.
+% Build: latexmk -pdf main.tex   (or: make)
+% =============================================================================
+
+\documentclass[a4paper,12pt,oneside]{book}
+
+\input{preamble}
+
+% Incremental builds: if `_includeonly.tex` is present in this directory it
+% is auto-loaded and should contain a single \includeonly{...} directive.
+% Written by `scripts/watch.sh --only <chapter>` (or `make watch-intro`).
+% For a manual one-off, uncomment the line below instead:
+% \includeonly{chapters/01-survey-sampling/chapter}
+\IfFileExists{_includeonly.tex}{\input{_includeonly}}{}
+
+\begin{document}
+
+% --- Frontmatter -------------------------------------------------------------
+\frontmatter 
+\input{frontmatter/title}
+\input{frontmatter/abstracts}
+% \input{frontmatter/acknowledgments}
+\input{frontmatter/coauthor-statements}
+\input{frontmatter/contents}
+
+% --- Mainmatter --------------------------------------------------------------
+\mainmatter
+\include{chapters/00c-introduction} 
+\include{chapters/01-survey-sampling/chapter}
+\include{chapters/02-malaria/chapter}
+\include{chapters/03-bebbo/chapter}
+\include{chapters/04-conclusion}
+
+\end{document}
