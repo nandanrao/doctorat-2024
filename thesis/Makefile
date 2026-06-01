@@ -3,21 +3,18 @@
 
 LATEXMK := latexmk -pdf -interaction=nonstopmode -halt-on-error -file-line-error
 
-# Final deliverable name. The document is built internally as `main.*` (so the
-# watch/dev loop and per-chapter .aux cache stay shared and fast); `make` then
-# publishes a copy under this name.
+# Deliverable name. Source root stays `main.tex`, but latexmk's $jobname (set
+# in .latexmkrc) makes every output/intermediate `rao-thesis-2026.*` — no
+# `main.pdf` is produced. This NAME must match $jobname in .latexmkrc.
 NAME    := rao-thesis-2026
 
 all: $(NAME).pdf
-
-$(NAME).pdf: main.pdf
-	cp -f main.pdf $@
 
 # Always invoke latexmk (via the FORCE prereq) and let it decide what to
 # rebuild — it tracks every dependency through its .fls cache. This avoids
 # listing source files in Make, some of which (the regression tables) contain
 # spaces and colons that Make cannot use as prerequisites.
-main.pdf: FORCE
+$(NAME).pdf: FORCE
 	$(LATEXMK) main.tex
 
 FORCE:
@@ -29,6 +26,8 @@ FORCE:
 # Full build:           make watch
 # Partial (faster):     make watch ONLY=00-introduction
 #                       make watch ONLY=00-introduction,04-conclusion
+#                       (chapter names: 00-introduction, 01-survey-sampling,
+#                        02-malaria, 03-bebbo, 04-conclusion)
 # Convenience targets:  make watch-intro / watch-conclusion / watch-sampling
 #                                          / watch-malaria / watch-bebbo
 #
@@ -39,7 +38,7 @@ ONLY ?=
 watch:
 	./scripts/watch.sh $(if $(ONLY),--only $(ONLY))
 
-watch-intro:      ; ./scripts/watch.sh --only 00b-introduction
+watch-intro:      ; ./scripts/watch.sh --only 00-introduction
 watch-conclusion: ; ./scripts/watch.sh --only 04-conclusion
 watch-sampling:   ; ./scripts/watch.sh --only 01-survey-sampling
 watch-malaria:    ; ./scripts/watch.sh --only 02-malaria

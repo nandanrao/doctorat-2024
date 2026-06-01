@@ -10,7 +10,7 @@
 # Errors are printed in full so you can see what broke. On success only the
 # status line is printed; the LaTeX log is suppressed.
 #
-# Open main.pdf in zathura (or in emacs via pdf-tools) once — it auto-reloads
+# Open rao-thesis-2026.pdf in zathura (or in emacs via pdf-tools) once — it auto-reloads
 # on rebuild. `make view` will launch zathura/evince for you.
 #
 # Usage:
@@ -63,7 +63,7 @@ if [[ -n "$ONLY" ]]; then
     name="${raw// /}"  # strip whitespace
     case "$name" in
       chapters/*) path="$name" ;;
-      00-introduction|00b-introduction|04-conclusion) path="chapters/$name" ;;
+      00-introduction|04-conclusion) path="chapters/$name" ;;
       *)          path="chapters/$name/chapter" ;;
     esac
     list+="${list:+,}${path}"
@@ -86,13 +86,13 @@ trap 'rm -f "$SUMMARY_SCRIPT"' EXIT
 
 cat >"$SUMMARY_SCRIPT" <<'SUMMARY_EOF'
 #!/usr/bin/env bash
-# Print one-line summary of the last latexmk build, based on main.log.
+# Print one-line summary of the last latexmk build, based on rao-thesis-2026.log.
 # Argument: "ok" | "fail" | "warn" (defaults to ok).
 #
 # Writes to /dev/tty directly so the summary survives even when the parent
 # latexmk has its stdout/stderr redirected to /dev/null.
 status="${1:-ok}"
-log="main.log"
+log="rao-thesis-2026.log"
 
 # All output goes to the controlling terminal if available, else stderr.
 if [[ -w /dev/tty ]]; then exec >/dev/tty 2>&1
@@ -136,7 +136,7 @@ SUMMARY_EOF
 chmod +x "$SUMMARY_SCRIPT"
 
 printf "[watch] starting latexmk -pvc on main.tex (Ctrl-C to stop)\n"
-printf "[watch] tip: open main.pdf in emacs (pdf-tools auto-reverts) or run 'make view'\n\n"
+printf "[watch] tip: open rao-thesis-2026.pdf in emacs (pdf-tools auto-reverts) or run 'make view'\n\n"
 
 # -pvc           : preview-continuous (poll for changes, rebuild)
 # -view=none     : do not spawn a PDF viewer
